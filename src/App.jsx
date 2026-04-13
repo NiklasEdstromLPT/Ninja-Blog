@@ -9,8 +9,8 @@ export default function App() {
       <header className="site-header">
         <div className="wrap">
           <Link to="/" className="brand">
-            <span className="brand-mark" aria-hidden="true">&#x1F977;</span>
-            <span className="brand-name">Ninja Blog</span>
+            <span className="material-symbols-outlined brand-mark" aria-hidden="true">home_work</span>
+            <span className="brand-name">Ninja <span className="brand-accent">Blog</span></span>
           </Link>
           <nav>
             <Link to="/">Projects</Link>
@@ -28,7 +28,8 @@ export default function App() {
 
       <footer className="site-footer">
         <div className="wrap">
-          <small>&copy; Ninja Blog</small>
+          <span className="footer-brand">Ninja Blog</span>
+          <small>&copy; {new Date().getFullYear()} Ninja Blog</small>
         </div>
       </footer>
     </>

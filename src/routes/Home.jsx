@@ -7,7 +7,8 @@ export default function Home() {
   return (
     <>
       <section className="intro">
-        <h1>Projects</h1>
+        <span className="badge">Project Showcase</span>
+        <h1>Ninja <span className="accent">Blog</span></h1>
         <p className="lede">A collection of work from the Ninja Blog crew.</p>
       </section>
 

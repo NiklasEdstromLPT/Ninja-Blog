@@ -28,8 +28,8 @@
     "repo": "https://github.com/your-org/example-one",
     "tileImage": "images/mail-sphere.png",
     "supportingImages": [
-      "images/shop-squared-2.png",
-      "images/shop-squared-3.png"
+      "images/mail-sphere-2.png",
+      "images/mail-sphere-3.png"
     ]
   }
 ]

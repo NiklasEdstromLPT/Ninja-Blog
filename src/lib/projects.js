@@ -27,6 +27,12 @@ export function projectImageUrl(src) {
   return `${normalizedBase}${normalizedPath}`;
 }
 
+export function isVideo(src) {
+  const value = String(src || '').trim();
+  if (!value) return false;
+  return /\.(mp4|webm|ogg)(?:\?.*)?$/i.test(value);
+}
+
 export async function loadProjects() {
   // Respect Vite's base URL so this works both locally and under
   // user.github.io/<repo>/.

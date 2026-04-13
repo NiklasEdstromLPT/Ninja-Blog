@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useProjects } from '../hooks/useProjects.js';
-import { projectSlug, projectImageUrl } from '../lib/projects.js';
+import { projectSlug, projectImageUrl, isVideo } from '../lib/projects.js';
 
 export default function Project() {
   const { slug } = useParams();
@@ -31,9 +31,22 @@ export default function Project() {
   const rawSupporting = Array.isArray(project.supportingImages)
     ? project.supportingImages
     : project.images;
-  const images = Array.isArray(rawSupporting)
-    ? rawSupporting.map((src) => projectImageUrl(src)).filter(Boolean)
-    : [];
+  const media = [];
+  if (Array.isArray(rawSupporting)) {
+    rawSupporting.forEach((src) => {
+      const trimmed = String(src || '').trim();
+      if (!trimmed) return;
+      media.push({ src: projectImageUrl(trimmed), type: isVideo(trimmed) ? 'video' : 'image' });
+    });
+  }
+  // Include videos — supports both `video` (string) and `videos` (array)
+  const rawVideos = Array.isArray(project.videos)
+    ? project.videos
+    : project.video ? [project.video] : [];
+  rawVideos.forEach((src) => {
+    const v = String(src || '').trim();
+    if (v) media.push({ src: projectImageUrl(v), type: 'video' });
+  });
   const fullSummary = project.longSummary || project.summary;
 
   return (
@@ -56,11 +69,22 @@ export default function Project() {
         </div>
       )}
 
-      {images.length > 0 && (
+      {media.length > 0 && (
         <div className="gallery">
-          {images.map((src, i) => (
-            <img key={i} src={src} alt={`${project.title} screenshot ${i + 1}`} loading="lazy" />
-          ))}
+              {media.map((m, i) => (
+                m.type === 'image' ? (
+                  <img key={i} src={m.src} alt={`${project.title} screenshot ${i + 1}`} loading="lazy" />
+                ) : (
+                  <video
+                    key={i}
+                    src={m.src}
+                    controls
+                    preload="metadata"
+                    playsInline
+                    style={{ maxWidth: '100%' }}
+                  />
+                )
+              ))}
         </div>
       )}
     </article>

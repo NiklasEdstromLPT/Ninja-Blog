@@ -19,5 +19,17 @@
     "title": "Ninja Blog",
     "summary": "The site you're looking at.",
     "repo": "https://github.com/your-org/ninja-blog"
+  },
+  {
+    "title": " Direct Mail Sphere",
+    "tileSummary": "A full-stack platform for real estate agents to create targeted direct mail campaigns.",
+    "longSummary": "Direct Mail Sphere is a full-stack web application built with Vue 3 (Vite) on the frontend and Node.js/Express on the backend, designed as a portal for real estate agents to create and manage targeted direct mail campaigns. It features both a client-facing interface for building campaigns and an admin portal for managing and tracking orders, along with secure authentication, email verification, and email integration via Resend. The system generates structured CSV files that integrate directly with FusionPro, enabling automated PDF creation and streamlining the workflow from campaign setup to print production and delivery.",
+    "live": "https://example.com",
+    "repo": "https://github.com/your-org/example-one",
+    "tileImage": "images/mail-sphere.png",
+    "supportingImages": [
+      "images/shop-squared-2.png",
+      "images/shop-squared-3.png"
+    ]
   }
 ]

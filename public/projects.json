@@ -21,6 +21,14 @@
     "repo": "https://github.com/your-org/ninja-blog"
   },
   {
+    "title": "Ninja Internal Demos",
+    "tileSummary": "Internal index of real estate lead generation demos, organized by team member.",
+    "longSummary": "A central hub for the HomeValue Digital Network's real estate lead generation ecosystem, built as a lightweight static site and deployed via GitHub Pages. It indexes live demo implementations across ten lead-gen verticals \u2014 military, pre-approval, FSBO, title verification, investor leads, agent matching, direct home purchase, home valuation for sellers, IDX search and alerts, and text-based lead capture \u2014 with each category linked to working pages from team members Nik, Juan, and Ryan. The site is intended for internal review and demonstration only, giving the team a single jumping-off point to compare implementations side by side.",
+    "live": "https://niklasedstromlpt.github.io/NinjaLeadEcosystem/",
+    "repo": "https://github.com/NiklasEdstromLPT/NinjaLeadEcosystem",
+    "tileImage": "images/Internal-Demo.png"
+  },
+  {
     "title": " Direct Mail Sphere",
     "tileSummary": "A full-stack platform for real estate agents to create targeted direct mail campaigns.",
     "longSummary": "Direct Mail Sphere is a full-stack web application built with Vue 3 (Vite) on the frontend and Node.js/Express on the backend, designed as a portal for real estate agents to create and manage targeted direct mail campaigns. It features both a client-facing interface for building campaigns and an admin portal for managing and tracking orders, along with secure authentication, email verification, and email integration via Resend. The system generates structured CSV files that integrate directly with FusionPro, enabling automated PDF creation and streamlining the workflow from campaign setup to print production and delivery.",

@@ -11,15 +11,23 @@ Edit [public/projects.json](public/projects.json) and append an object to the ar
 ```json
 {
   "title": "My Project",
-  "summary": "Short description.",
+  "tileSummary": "Short description for the tile.",
+  "longSummary": "Longer description for the project page.",
+  "tileImage": "images/my-thumb.png",
+  "supportingImages": ["images/shot1.png", "images/shot2.png"],
   "live": "https://example.com",
   "repo": "https://github.com/you/repo",
-  "images": ["https://.../shot1.png", "https://.../shot2.png"],
   "slug": "optional-override"
 }
 ```
 
 - `title` — required. Also drives the URL slug (lowercased, non-alphanumerics become `-`).
+- `tileSummary` — optional short text shown on the home tile.
+- `longSummary` — optional detailed text shown on the project page.
+- `tileImage` — optional image shown on the home tile.
+- `supportingImages` — optional gallery images shown on the project page.
+- `summary` — optional legacy fallback used when `tileSummary`/`longSummary` are not provided.
+- `images` — optional legacy fallback for `supportingImages` (and tile thumbnail when `tileImage` is absent).
 - `slug` — optional explicit override.
 - Everything else is optional and is hidden when absent.
 

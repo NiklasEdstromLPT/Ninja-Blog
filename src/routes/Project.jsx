@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useProjects } from '../hooks/useProjects.js';
-import { projectSlug } from '../lib/projects.js';
+import { projectSlug, projectImageUrl } from '../lib/projects.js';
 
 export default function Project() {
   const { slug } = useParams();
@@ -28,12 +28,18 @@ export default function Project() {
     );
   }
 
-  const images = Array.isArray(project.images) ? project.images : [];
+  const rawSupporting = Array.isArray(project.supportingImages)
+    ? project.supportingImages
+    : project.images;
+  const images = Array.isArray(rawSupporting)
+    ? rawSupporting.map((src) => projectImageUrl(src)).filter(Boolean)
+    : [];
+  const fullSummary = project.longSummary || project.summary;
 
   return (
     <article className="project">
       <h1>{project.title}</h1>
-      {project.summary && <p className="summary">{project.summary}</p>}
+      {fullSummary && <p className="summary">{fullSummary}</p>}
 
       {(project.live || project.repo) && (
         <div className="links">

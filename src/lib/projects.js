@@ -13,6 +13,20 @@ export function projectSlug(project) {
   return slugify(project.slug || project.title);
 }
 
+export function projectImageUrl(src) {
+  const value = String(src || '').trim();
+  if (!value) return '';
+  // Keep absolute/data/blob URLs untouched.
+  if (/^(?:[a-z]+:)?\/\//i.test(value) || /^(data|blob):/i.test(value)) {
+    return value;
+  }
+
+  const base = import.meta.env.BASE_URL || '/';
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  const normalizedPath = value.replace(/^\/+/, '');
+  return `${normalizedBase}${normalizedPath}`;
+}
+
 export async function loadProjects() {
   // Respect Vite's base URL so this works both locally and under
   // user.github.io/<repo>/.

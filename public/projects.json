@@ -1,12 +1,14 @@
 [
   {
-    "title": "Example Project One",
-    "summary": "A short description of what this project does and why it's interesting. Only the title is required \u2014 everything else here is optional.",
+    "title": "Shop Squared",
+    "tileSummary": "Inventory management app for ecommerce and event workflows.",
+    "longSummary": "A browser-based inventory management app built with Vue 3 and Vite, designed initially for our Spring Con inventory. It combines a fast, clean frontend with a Node-based architecture and a Supabase backend to manage bins, items, and product variations efficiently. The app includes a login system with session persistence, uses GitHub secrets to protect sensitive configuration, and processes CSV/XLSX files entirely in the browser for secure, client-side data handling, making it a practical tool for real-time inventory tracking in ecommerce and event environments.",
     "live": "https://example.com",
     "repo": "https://github.com/your-org/example-one",
-    "images": [
-      "https://via.placeholder.com/800x450?text=Screenshot+1",
-      "https://via.placeholder.com/800x450?text=Screenshot+2"
+    "tileImage": "images/shop-squared.png",
+    "supportingImages": [
+      "images/shop-squared-2.png",
+      "images/shop-squared-3.png"
     ]
   },
   {

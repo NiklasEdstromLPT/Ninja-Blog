@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import { projectSlug } from '../lib/projects.js';
+import { projectSlug, projectImageUrl } from '../lib/projects.js';
 
 export default function ProjectTile({ project }) {
   const slug = projectSlug(project);
-  const thumb = project.images && project.images[0];
+  const thumb = projectImageUrl(project.tileImage || (project.images && project.images[0]));
+  const tileSummary = project.tileSummary || project.summary;
 
   return (
     <Link className="tile" to={`/project/${slug}`}>
@@ -17,7 +18,7 @@ export default function ProjectTile({ project }) {
       )}
       <div className="tile-body">
         <h2 className="tile-title">{project.title}</h2>
-        {project.summary && <p className="tile-summary">{project.summary}</p>}
+        {tileSummary && <p className="tile-summary">{tileSummary}</p>}
       </div>
     </Link>
   );

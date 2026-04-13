@@ -12,12 +12,17 @@
     ]
   },
   {
-    "title": "Minimal Project test",
-    "summary": "Only title + summary. Live/repo/images are omitted and simply won't render."
+    "title": "Zoom Bot",
+    "tileSummary": "A bot that integrates with OBS Studio in Zoom meetings to trigger automated responses, visuals, and sound effects.",
+    "longSummary": "The Zoom Bot is a Node.js application that connects to Zoom meetings using the Zoom API and integrates with OBS Studio to create interactive meeting experiences. It listens for specific triggers in the meeting, such as chat messages or participant actions, and responds by activating predefined scenes, visuals, or sound effects in OBS. This allows for dynamic presentations, engaging webinars, and enhanced virtual events by automating responses based on real-time meeting interactions.",
+    "videos": ["videos/zoom-bot.mp4", "videos/zoom-bot-2.mp4"],
+    "tileImage": "images/zoom-bot.png",
+    "repo": "https://github.com/Juanfnmb1LPT/zoom_bot"
   },
   {
     "title": "Ninja Blog",
-    "summary": "The site you're looking at.",
+    "tileSummary": "The site you're looking at.",
+    "longSummary": "Ninja Blog is a personal project showcasing various web development skills and projects. It serves as a portfolio and a platform to share insights, tutorials, and updates on ongoing projects.",
     "repo": "https://github.com/your-org/ninja-blog"
   },
   {
@@ -32,8 +37,7 @@
     "title": " Direct Mail Sphere",
     "tileSummary": "A full-stack platform for real estate agents to create targeted direct mail campaigns.",
     "longSummary": "Direct Mail Sphere is a full-stack web application built with Vue 3 (Vite) on the frontend and Node.js/Express on the backend, designed as a portal for real estate agents to create and manage targeted direct mail campaigns. It features both a client-facing interface for building campaigns and an admin portal for managing and tracking orders, along with secure authentication, email verification, and email integration via Resend. The system generates structured CSV files that integrate directly with FusionPro, enabling automated PDF creation and streamlining the workflow from campaign setup to print production and delivery.",
-    "live": "https://example.com",
-    "repo": "https://github.com/your-org/example-one",
+    "repo": "https://github.com/Juanfnmb1LPT/Direct-Mail-Sphere",
     "tileImage": "images/mail-sphere.png",
     "supportingImages": [
       "images/mail-sphere-2.png",

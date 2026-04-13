@@ -39,5 +39,11 @@
       "images/mail-sphere-2.png",
       "images/mail-sphere-3.png"
     ]
+  },
+  {
+    "title": "Lofty Forms",
+    "tileSummary": "Dynamic onboarding forms with an admin panel, per-office QR codes, and live Lofty API integration.",
+    "longSummary": "A dynamic form application built to streamline office onboarding workflows. The admin panel pulls offices in real time from the Lofty API through a Node.js/Express proxy, lets an admin toggle which social and link fields appear, and generates a unique form URL plus a downloadable QR code for each office. The form itself is a Vue 3 (Vite) single-page app driven by a 27-field config file, with per-field validation for names, emails, phone numbers, URLs, and integers, real-time format hints, and an office field that auto-fills from the URL slug. Submissions come back as a CSV named after the office and submitter. Credentials live in a backend .env file so the Lofty API key never reaches the browser. Planned next steps include Supabase-backed submission storage, role-based auth for admins and team leaders, and caching of office data to reduce API calls.",
+    "repo": "https://github.com/NiklasEdstromLPT/Forms"
   }
 ]

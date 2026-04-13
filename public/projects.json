@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Example Project One",
+    "summary": "A short description of what this project does and why it's interesting. Only the title is required \u2014 everything else here is optional.",
+    "live": "https://example.com",
+    "repo": "https://github.com/your-org/example-one",
+    "images": [
+      "https://via.placeholder.com/800x450?text=Screenshot+1",
+      "https://via.placeholder.com/800x450?text=Screenshot+2"
+    ]
+  },
+  {
+    "title": "Minimal Project",
+    "summary": "Only title + summary. Live/repo/images are omitted and simply won't render."
+  },
+  {
+    "title": "Ninja Blog",
+    "summary": "The site you're looking at.",
+    "repo": "https://github.com/your-org/ninja-blog"
+  }
+]

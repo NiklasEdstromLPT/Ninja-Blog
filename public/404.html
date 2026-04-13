@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ninja Blog</title>
+    <script>
+      // Single Page Apps for GitHub Pages (rafgraph/spa-github-pages).
+      // Rewrites unknown paths into a `?/path` query on index.html,
+      // which index.html restores to a real path before React Router runs.
+      //
+      // pathSegmentsToKeep = 1 for project-site deploys (user.github.io/<repo>/).
+      // Set to 0 if deploying to a user/org root site (user.github.io/).
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

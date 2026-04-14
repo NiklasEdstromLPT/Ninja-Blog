@@ -54,6 +54,12 @@ export default function Project() {
       <h1>{project.title}</h1>
       {fullSummary && <p className="summary">{fullSummary}</p>}
 
+      {project.challenges && (
+        <p className="challenges">
+          <strong>Challenges</strong>: {project.challenges}
+        </p>
+      )}
+
       {(project.live || project.repo) && (
         <div className="links">
           {project.live && (

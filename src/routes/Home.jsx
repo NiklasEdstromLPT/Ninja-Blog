@@ -5,6 +5,7 @@ import ProjectTile from '../components/ProjectTile.jsx';
 export default function Home() {
   const { projects, error } = useProjects();
   const [sort, setSort] = useState('none'); // 'none' | 'az' | 'za'
+  const [view, setView] = useState('showcase'); // 'showcase' | 'all'
 
 
   const cycleSort = () =>
@@ -12,11 +13,15 @@ export default function Home() {
 
   const normalize = (t) => t.trim().toLowerCase();
 
-  let sorted = projects;
-  if (projects && sort === 'az') {
-    sorted = [...projects].sort((a, b) => normalize(a.title).localeCompare(normalize(b.title)));
-  } else if (projects && sort === 'za') {
-    sorted = [...projects].sort((a, b) => normalize(b.title).localeCompare(normalize(a.title)));
+  const filtered = projects && view === 'showcase'
+    ? projects.filter((p) => p.showcase)
+    : projects;
+
+  let sorted = filtered;
+  if (filtered && sort === 'az') {
+    sorted = [...filtered].sort((a, b) => normalize(a.title).localeCompare(normalize(b.title)));
+  } else if (filtered && sort === 'za') {
+    sorted = [...filtered].sort((a, b) => normalize(b.title).localeCompare(normalize(a.title)));
   }
 
   return (
@@ -33,6 +38,16 @@ export default function Home() {
           }}
         >Ninja <span className="accent">Blog</span></span></h1>
         <p className="lede">A collection of work from the Ninja Code crew.</p>
+        <div className="view-toggle">
+          <button
+            className={`view-btn${view === 'showcase' ? ' active' : ''}`}
+            onClick={() => setView('showcase')}
+          >Showcase</button>
+          <button
+            className={`view-btn${view === 'all' ? ' active' : ''}`}
+            onClick={() => setView('all')}
+          >All</button>
+        </div>
       </section>
 
       {!error && projects && projects.length > 0 && (

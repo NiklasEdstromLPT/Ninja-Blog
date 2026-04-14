@@ -10,6 +10,7 @@ export default function ProjectTile({ project }) {
 
   return (
     <Link className="tile" to={`/project/${slug}`}>
+      {project.showcase && <span className="tile-ribbon">Showcase</span>}
       {thumb ? (
         thumbIsVideo ? (
           <video className="tile-thumb" src={thumb} muted loop playsInline autoPlay />

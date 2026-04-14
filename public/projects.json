@@ -64,6 +64,7 @@
   },
     {
     "title": "BuyMyHouse",
+    "showcase": true,
     "tileSummary": "A platform that captures motivated sellers, connects them with buyers or specialists, and offers sale paths based on their needs.",
     "longSummary": "The purpose of this platform is to provide homeowners with a flexible, modern selling experience that reflects today’s real estate market, where cash offers and traditional listings coexist. As the space has evolved beyond early players like Opendoor and Offerpad, sellers now expect multiple paths when considering a sale.",
     "longSummary1": "This platform acts as a neutral, intent-driven hub that captures motivated sellers, connects them with a potential buyer or specialist, and presents tailored options—whether that’s evaluating competitive cash offers from a network of investors or pursuing a full market listing.",
@@ -81,6 +82,7 @@
   },
   {
     "title": "Find My Agent",
+    "showcase": true,
     "tileSummary": "A platform that matches homeowners with the most qualified real estate agent for their specific situation.",
     "longSummary": "This platform is designed to eliminate the guesswork in choosing a real estate agent by connecting homeowners with specialists who have proven experience in specific scenarios such as VA loans, probate, divorce, and investment properties.",
     "longSummary1": "Instead of presenting users with a broad directory, it uses a structured intake process and data-driven matching system to identify the single most qualified agent for each unique situation.",
@@ -98,6 +100,7 @@
   },
   {
     "title": "Text-Based Lead Capture",
+    "showcase": true,
     "tileSummary": "A text-based real estate platform that captures buyer intent by instantly delivering property details via SMS and connecting them with agents.",
     "longSummary": "This platform is designed to bridge offline and online real estate engagement by allowing users to instantly access property information through a simple text message. By texting a memorable short code, users can receive real-time details such as pricing, photos, and property specs without needing apps or logins.",
     "longSummary1": "The system captures high-intent buyers at the exact moment of interest—whether they’re viewing a yard sign, billboard, or advertisement—and routes inquiries directly to local agents for follow-up.",

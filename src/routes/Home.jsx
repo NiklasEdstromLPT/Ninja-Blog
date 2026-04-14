@@ -5,7 +5,7 @@ import ProjectTile from '../components/ProjectTile.jsx';
 export default function Home() {
   const { projects, error } = useProjects();
   const [sort, setSort] = useState('none'); // 'none' | 'az' | 'za'
-  const [shurikenKey, setShurikenKey] = useState(0);
+
 
   const cycleSort = () =>
     setSort((s) => (s === 'none' ? 'az' : s === 'az' ? 'za' : 'none'));
@@ -23,11 +23,15 @@ export default function Home() {
     <>
       <section className="intro">
         <span className="badge">Project Showcase</span>
-        <h1
-          key={shurikenKey}
-          className="shuriken-trigger"
-          onClick={() => setShurikenKey((k) => k + 1)}
-        >Ninja <span className="accent">Blog</span></h1>
+        <h1><span
+          className="shuriken-text"
+          onClick={(e) => {
+            const el = e.currentTarget;
+            if (el.classList.contains('shuriken-play')) return;
+            el.classList.add('shuriken-play');
+            setTimeout(() => el.classList.remove('shuriken-play'), 1750);
+          }}
+        >Ninja <span className="accent">Blog</span></span></h1>
         <p className="lede">A collection of work from the Ninja Code crew.</p>
       </section>
 

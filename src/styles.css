@@ -149,10 +149,12 @@ main.wrap { flex: 1; }
   letter-spacing: -0.04em;
   line-height: 1.05;
   color: var(--fg);
+}
+.shuriken-text {
   position: relative;
   cursor: default;
 }
-.intro h1::after {
+.shuriken-text::after {
   content: '\2726';
   position: absolute;
   bottom: -0.3em;
@@ -162,14 +164,18 @@ main.wrap { flex: 1; }
   opacity: 0;
 }
 @media (hover: hover) {
-  .intro h1:hover::after {
-    animation: shuriken-slide 1.5s ease-in-out forwards;
+  .shuriken-text:hover::after {
+    animation: shuriken-slide 1.7s ease-in-out forwards;
   }
 }
-@media (hover: none) {
-  .intro h1.shuriken-trigger::after {
-    animation: shuriken-slide 1.5s ease-in-out forwards;
-  }
+.shuriken-text.shuriken-play::after {
+  animation: shuriken-slide-tap 1.7s ease-in-out forwards;
+}
+@keyframes shuriken-slide-tap {
+  0%   { left: -1em; opacity: 0; transform: rotate(0deg); }
+  10%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { left: calc(100% + 0.5em); opacity: 0; transform: rotate(540deg); }
 }
 @keyframes shuriken-slide {
   0%   { left: -1em; opacity: 0; transform: rotate(0deg); }

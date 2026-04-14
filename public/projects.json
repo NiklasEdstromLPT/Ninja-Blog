@@ -56,8 +56,8 @@
   },
     {
     "title": "BuyMyHouse",
-    "tileSummary": "A platform that captures motivated sellers, connects them with specialists, and offers sale paths based on their needs.",
-    "longSummary": "The purpose of this platform is to provide homeowners with a flexible, modern selling experience that reflects today’s real estate market, where cash offers and traditional listings coexist. As the space has evolved beyond early players like Opendoor and Offerpad, sellers now expect multiple paths when considering a sale. This platform acts as a neutral, intent-driven hub that captures motivated sellers, connects them with a qualified specialist, and presents tailored options—whether that’s evaluating competitive cash offers from a network of investors or pursuing a full market listing. By combining streamlined technology with real human expertise, it creates a seamless bridge between alternative selling methods and traditional real estate, giving sellers the clarity and control to choose the best path forward.",
+    "tileSummary": "A platform that captures motivated sellers, connects them with buyers or specialists, and offers sale paths based on their needs.",
+    "longSummary": "The purpose of this platform is to provide homeowners with a flexible, modern selling experience that reflects today’s real estate market, where cash offers and traditional listings coexist. As the space has evolved beyond early players like Opendoor and Offerpad, sellers now expect multiple paths when considering a sale. This platform acts as a neutral, intent-driven hub that captures motivated sellers, connects them with a potential buyer or specialist, and presents tailored options—whether that’s evaluating competitive cash offers from a network of investors or pursuing a full market listing. By combining streamlined technology with real human expertise, it creates a seamless bridge between alternative selling methods and traditional real estate, giving sellers the clarity and control to choose the best path forward.",
     "repo": "https://github.com/Juanfnmb1LPT/buymyhouse",
     "live": "https://juanfnmb1lpt.github.io/buymyhouse/",
     "tileImage": "images/BuyMyHouse.png",
@@ -65,6 +65,5 @@
       "images/BuyMyHouse-2.png",
       "images/BuyMyHouse-3.png"
     ],
-    "challenges": "Early versions of the platform face challenges around integrating MLS and public records data for accurate transaction history and building a reliable address-based system for matching users with the right agents. It also depends on a complete and well-structured internal agent directory to support effective agent matching and user trust. Additionally, setting up consistent email delivery or tailored notification systems is essential to ensure timely communication, all of which are foundational requirements for the initial release."
-  }
+    "challenges": "Early versions of the platform face challenges in delivering core functionality such as a multi-step seller intake form, reliable email routing to cash buyers, basic CRM tracking, and a simple admin dashboard to manage submissions. Beyond development, building a strong investor network and handling sensitive seller data introduce business and privacy hurdles, while also requiring an agent-matching fallback when cash offers don’t meet seller expectations. Additionally, the MVP has little technical moat and risks being over-engineered, making execution, partnerships, and user trust the biggest challenges in the initial phase."}
 ]

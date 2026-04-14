@@ -121,8 +121,12 @@ export default function Project() {
           </div>
           {media.length > 1 && (
             <>
-              <button className="carousel-btn carousel-prev" onClick={prev} aria-label="Previous">&#8249;</button>
-              <button className="carousel-btn carousel-next" onClick={next} aria-label="Next">&#8250;</button>
+              <button className="carousel-btn carousel-prev" onClick={prev} aria-label="Previous">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button className="carousel-btn carousel-next" onClick={next} aria-label="Next">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+              </button>
               <div className="carousel-controls">
                 <div className="carousel-dots">
                   {media.map((_, i) => (

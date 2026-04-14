@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useProjects } from '../hooks/useProjects.js';
 import { projectSlug, projectImageUrl, isVideo } from '../lib/projects.js';
@@ -6,6 +6,7 @@ import { projectSlug, projectImageUrl, isVideo } from '../lib/projects.js';
 export default function Project() {
   const { slug } = useParams();
   const { projects, error } = useProjects();
+  const [slide, setSlide] = useState(0);
 
   const project = projects?.find((p) => projectSlug(p) === slug);
 
@@ -28,10 +29,15 @@ export default function Project() {
     );
   }
 
+  // Build media array: tile image first, then supporting images, then videos
+  const media = [];
+  if (project.tileImage) {
+    const t = String(project.tileImage).trim();
+    if (t) media.push({ src: projectImageUrl(t), type: isVideo(t) ? 'video' : 'image' });
+  }
   const rawSupporting = Array.isArray(project.supportingImages)
     ? project.supportingImages
     : project.images;
-  const media = [];
   if (Array.isArray(rawSupporting)) {
     rawSupporting.forEach((src) => {
       const trimmed = String(src || '').trim();
@@ -39,7 +45,6 @@ export default function Project() {
       media.push({ src: projectImageUrl(trimmed), type: isVideo(trimmed) ? 'video' : 'image' });
     });
   }
-  // Include videos — supports both `video` (string) and `videos` (array)
   const rawVideos = Array.isArray(project.videos)
     ? project.videos
     : project.video ? [project.video] : [];
@@ -47,18 +52,29 @@ export default function Project() {
     const v = String(src || '').trim();
     if (v) media.push({ src: projectImageUrl(v), type: 'video' });
   });
-  const fullSummary = project.longSummary || project.summary;
+
+  // Collect numbered fields: longSummary, longSummary1, longSummary2, ...
+  const collectFields = (prefix) => {
+    const parts = [];
+    if (project[prefix]) parts.push(project[prefix]);
+    for (let i = 1; project[`${prefix}${i}`]; i++) {
+      parts.push(project[`${prefix}${i}`]);
+    }
+    return parts;
+  };
+
+  const summaryParts = collectFields('longSummary').length
+    ? collectFields('longSummary')
+    : project.summary ? [project.summary] : [];
+  const challengeParts = collectFields('challenges');
+
+  const current = Math.min(slide, media.length - 1);
+  const prev = () => setSlide((s) => (s - 1 + media.length) % media.length);
+  const next = () => setSlide((s) => (s + 1) % media.length);
 
   return (
     <article className="project">
       <h1>{project.title}</h1>
-      {fullSummary && <p className="summary">{fullSummary}</p>}
-
-      {project.challenges && (
-        <p className="challenges">
-          <strong>Challenges</strong>: {project.challenges}
-        </p>
-      )}
 
       {(project.live || project.repo) && (
         <div className="links">
@@ -76,21 +92,44 @@ export default function Project() {
       )}
 
       {media.length > 0 && (
-        <div className="gallery">
-              {media.map((m, i) => (
-                m.type === 'image' ? (
-                  <img key={i} src={m.src} alt={`${project.title} screenshot ${i + 1}`} loading="lazy" />
-                ) : (
-                  <video
+        <div className="carousel">
+          <div className="carousel-slide">
+            {media[current].type === 'image' ? (
+              <img src={media[current].src} alt={`${project.title} screenshot ${current + 1}`} />
+            ) : (
+              <video src={media[current].src} controls preload="metadata" playsInline />
+            )}
+          </div>
+          {media.length > 1 && (
+            <>
+              <button className="carousel-btn carousel-prev" onClick={prev} aria-label="Previous">&#8249;</button>
+              <button className="carousel-btn carousel-next" onClick={next} aria-label="Next">&#8250;</button>
+              <div className="carousel-dots">
+                {media.map((_, i) => (
+                  <button
                     key={i}
-                    src={m.src}
-                    controls
-                    preload="metadata"
-                    playsInline
-                    style={{ maxWidth: '100%' }}
+                    className={`carousel-dot${i === current ? ' active' : ''}`}
+                    onClick={() => setSlide(i)}
+                    aria-label={`Go to slide ${i + 1}`}
                   />
-                )
-              ))}
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      )}
+
+      {summaryParts.length > 0 && (
+        <div className="summary">
+          <h2>Summary</h2>
+          {summaryParts.map((text, i) => <p key={i}>{text}</p>)}
+        </div>
+      )}
+
+      {challengeParts.length > 0 && (
+        <div className="challenges">
+          <h2>Challenges</h2>
+          {challengeParts.map((text, i) => <p key={i}>{text}</p>)}
         </div>
       )}
     </article>

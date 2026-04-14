@@ -2,7 +2,8 @@
   {
     "title": "Shop Squared",
     "tileSummary": "Inventory management app for ecommerce and event workflows.",
-    "longSummary": "A browser-based inventory management app built with Vue 3 and Vite, designed initially for our Spring Con inventory. It combines a fast, clean frontend with a Node-based architecture and a Supabase backend to manage bins, items, and product variations efficiently. The app includes a login system with session persistence, uses GitHub secrets to protect sensitive configuration, and processes CSV/XLSX files entirely in the browser for secure, client-side data handling, making it a practical tool for real-time inventory tracking in ecommerce and event environments.",
+    "longSummary": "A browser-based inventory management app built with Vue 3 and Vite, designed initially for our Spring Con inventory. It combines a fast, clean frontend with a Node-based architecture and a Supabase backend to manage bins, items, and product variations efficiently.",
+    "longSummary1": "The app includes a login system with session persistence, uses GitHub secrets to protect sensitive configuration, and processes CSV/XLSX files entirely in the browser for secure, client-side data handling, making it a practical tool for real-time inventory tracking in ecommerce and event environments.",
     "live": "https://example.com",
     "repo": "https://github.com/your-org/example-one",
     "tileImage": "images/shop-squared.png",
@@ -14,7 +15,8 @@
   {
     "title": "Zoom Bot",
     "tileSummary": "A bot that integrates with OBS Studio in Zoom meetings to trigger automated responses, visuals, and sound effects.",
-    "longSummary": "The Zoom Bot is a Node.js application that connects to Zoom meetings using the Zoom API and integrates with OBS Studio to create interactive meeting experiences. It listens for specific triggers in the meeting, such as chat messages or participant actions, and responds by activating predefined scenes, visuals, or sound effects in OBS. This allows for dynamic presentations, engaging webinars, and enhanced virtual events by automating responses based on real-time meeting interactions.",
+    "longSummary": "The Zoom Bot is a Node.js application that connects to Zoom meetings using the Zoom API and integrates with OBS Studio to create interactive meeting experiences.",
+    "longSummary1": "It listens for specific triggers in the meeting, such as chat messages or participant actions, and responds by activating predefined scenes, visuals, or sound effects in OBS. This allows for dynamic presentations, engaging webinars, and enhanced virtual events by automating responses based on real-time meeting interactions.",
     "videos": ["videos/zoom-bot.mp4", "videos/zoom-bot-2.mp4"],
     "tileImage": "images/zoom-bot.png",
     "repo": "https://github.com/Juanfnmb1LPT/zoom_bot"
@@ -28,7 +30,9 @@
   {
     "title": "Ninja Internal Demos",
     "tileSummary": "Internal index of real estate lead generation demos, organized by team member.",
-    "longSummary": "A central hub for the HomeValue Digital Network's real estate lead generation ecosystem, built as a lightweight static site and deployed via GitHub Pages. It indexes live demo implementations across ten lead-gen verticals \u2014 military, pre-approval, FSBO, title verification, investor leads, agent matching, direct home purchase, home valuation for sellers, IDX search and alerts, and text-based lead capture \u2014 with each category linked to working pages from team members Nik, Juan, and Ryan. The site is intended for internal review and demonstration only, giving the team a single jumping-off point to compare implementations side by side.",
+    "longSummary": "A central hub for the HomeValue Digital Network's real estate lead generation ecosystem, built as a lightweight static site and deployed via GitHub Pages.",
+    "longSummary1": "It indexes live demo implementations across ten lead-gen verticals \u2014 military, pre-approval, FSBO, title verification, investor leads, agent matching, direct home purchase, home valuation for sellers, IDX search and alerts, and text-based lead capture \u2014 with each category linked to working pages from team members Nik, Juan, and Ryan.",
+    "longSummary2": "The site is intended for internal review and demonstration only, giving the team a single jumping-off point to compare implementations side by side.",
     "live": "https://niklasedstromlpt.github.io/NinjaLeadEcosystem/",
     "repo": "https://github.com/NiklasEdstromLPT/NinjaLeadEcosystem",
     "tileImage": "images/Internal-Demo.png"
@@ -36,7 +40,9 @@
   {
     "title": "Direct Mail Sphere",
     "tileSummary": "A full-stack platform for real estate agents to create targeted direct mail campaigns.",
-    "longSummary": "Direct Mail Sphere is a full-stack web application built with Vue 3 (Vite) on the frontend and Node.js/Express on the backend, designed as a portal for real estate agents to create and manage targeted direct mail campaigns. It features both a client-facing interface for building campaigns and an admin portal for managing and tracking orders, along with secure authentication, email verification, and email integration via Resend. The system generates structured CSV files that integrate directly with FusionPro, enabling automated PDF creation and streamlining the workflow from campaign setup to print production and delivery.",
+    "longSummary": "Direct Mail Sphere is a full-stack web application built with Vue 3 (Vite) on the frontend and Node.js/Express on the backend, designed as a portal for real estate agents to create and manage targeted direct mail campaigns.",
+    "longSummary1": "It features both a client-facing interface for building campaigns and an admin portal for managing and tracking orders, along with secure authentication, email verification, and email integration via Resend.",
+    "longSummary2": "The system generates structured CSV files that integrate directly with FusionPro, enabling automated PDF creation and streamlining the workflow from campaign setup to print production and delivery.",
     "repo": "https://github.com/Juanfnmb1LPT/Direct-Mail-Sphere",
     "tileImage": "images/mail-sphere.png",
     "supportingImages": [
@@ -47,7 +53,9 @@
   {
     "title": "Lofty Forms",
     "tileSummary": "Dynamic onboarding forms with an admin panel, per-office QR codes, and live Lofty API integration.",
-    "longSummary": "A dynamic form application built to streamline office onboarding workflows. The admin panel pulls offices in real time from the Lofty API through a Node.js/Express proxy, lets an admin toggle which social and link fields appear, and generates a unique form URL plus a downloadable QR code for each office. The form itself is a Vue 3 (Vite) single-page app driven by a 27-field config file, with per-field validation for names, emails, phone numbers, URLs, and integers, real-time format hints, and an office field that auto-fills from the URL slug. Submissions come back as a CSV named after the office and submitter. Credentials live in a backend .env file so the Lofty API key never reaches the browser. Planned next steps include Supabase-backed submission storage, role-based auth for admins and team leaders, and caching of office data to reduce API calls.",
+    "longSummary": "A dynamic form application built to streamline office onboarding workflows. The admin panel pulls offices in real time from the Lofty API through a Node.js/Express proxy, lets an admin toggle which social and link fields appear, and generates a unique form URL plus a downloadable QR code for each office.",
+    "longSummary1": "The form itself is a Vue 3 (Vite) single-page app driven by a 27-field config file, with per-field validation for names, emails, phone numbers, URLs, and integers, real-time format hints, and an office field that auto-fills from the URL slug. Submissions come back as a CSV named after the office and submitter.",
+    "longSummary2": "Credentials live in a backend .env file so the Lofty API key never reaches the browser. Planned next steps include Supabase-backed submission storage, role-based auth for admins and team leaders, and caching of office data to reduce API calls.",
     "repo": "https://github.com/NiklasEdstromLPT/Forms",
     "tileImage": "images/Forms.png",
     "supportingImages": [
@@ -57,7 +65,9 @@
     {
     "title": "BuyMyHouse",
     "tileSummary": "A platform that captures motivated sellers, connects them with buyers or specialists, and offers sale paths based on their needs.",
-    "longSummary": "The purpose of this platform is to provide homeowners with a flexible, modern selling experience that reflects today’s real estate market, where cash offers and traditional listings coexist. As the space has evolved beyond early players like Opendoor and Offerpad, sellers now expect multiple paths when considering a sale. This platform acts as a neutral, intent-driven hub that captures motivated sellers, connects them with a potential buyer or specialist, and presents tailored options—whether that’s evaluating competitive cash offers from a network of investors or pursuing a full market listing. By combining streamlined technology with real human expertise, it creates a seamless bridge between alternative selling methods and traditional real estate, giving sellers the clarity and control to choose the best path forward.",
+    "longSummary": "The purpose of this platform is to provide homeowners with a flexible, modern selling experience that reflects today’s real estate market, where cash offers and traditional listings coexist. As the space has evolved beyond early players like Opendoor and Offerpad, sellers now expect multiple paths when considering a sale.",
+    "longSummary1": "This platform acts as a neutral, intent-driven hub that captures motivated sellers, connects them with a potential buyer or specialist, and presents tailored options—whether that’s evaluating competitive cash offers from a network of investors or pursuing a full market listing.",
+    "longSummary2": "By combining streamlined technology with real human expertise, it creates a seamless bridge between alternative selling methods and traditional real estate, giving sellers the clarity and control to choose the best path forward.",
     "repo": "https://github.com/Juanfnmb1LPT/buymyhouse",
     "live": "https://juanfnmb1lpt.github.io/buymyhouse/",
     "tileImage": "images/BuyMyHouse.png",
@@ -65,5 +75,8 @@
       "images/BuyMyHouse-2.png",
       "images/BuyMyHouse-3.png"
     ],
-    "challenges": "Early versions of the platform face challenges in delivering core functionality such as a multi-step seller intake form, reliable email routing to cash buyers, basic CRM tracking, and a simple admin dashboard to manage submissions. Beyond development, building a strong investor network and handling sensitive seller data introduce business and privacy hurdles, while also requiring an agent-matching fallback when cash offers don’t meet seller expectations. Additionally, the MVP has little technical moat and risks being over-engineered, making execution, partnerships, and user trust the biggest challenges in the initial phase."}
+    "challenges": "Early versions of the platform face challenges in delivering core functionality such as a multi-step seller intake form, reliable email routing to cash buyers, basic CRM tracking, and a simple admin dashboard to manage submissions.",
+    "challenges1": "Beyond development, building a strong investor network and handling sensitive seller data introduce business and privacy hurdles, while also requiring an agent-matching fallback when cash offers don’t meet seller expectations.",
+    "challenges2": "Additionally, the MVP has little technical moat and risks being over-engineered, making execution, partnerships, and user trust the biggest challenges in the initial phase."
+  }
 ]

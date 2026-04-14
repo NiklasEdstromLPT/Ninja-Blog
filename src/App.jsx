@@ -12,9 +12,6 @@ export default function App() {
             <span className="material-symbols-outlined brand-mark" aria-hidden="true">home_work</span>
             <span className="brand-name">Ninja <span className="brand-accent">Blog</span></span>
           </Link>
-          <nav>
-            <Link to="/">Projects</Link>
-          </nav>
         </div>
       </header>
 

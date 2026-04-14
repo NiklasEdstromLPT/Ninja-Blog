@@ -66,6 +66,18 @@ a:hover { color: var(--accent-2); }
   font-size: 1.25rem;
   letter-spacing: -0.03em;
   color: var(--fg);
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+a.brand,
+a.brand:hover,
+a.brand:focus {
+  color: var(--fg);
+}
+a.brand:hover {
+  transform: scale(1.03);
+  text-shadow: 0 2px 10px rgba(11, 26, 61, 0.25);
 }
 .brand-mark {
   font-family: 'Material Symbols Outlined';
@@ -113,7 +125,7 @@ main.wrap { flex: 1; }
 
 /* Intro */
 .intro {
-  padding: 5rem 0 3rem;
+  padding: 5rem 0 1rem;
   text-align: center;
 }
 .intro .badge {
@@ -137,6 +149,33 @@ main.wrap { flex: 1; }
   letter-spacing: -0.04em;
   line-height: 1.05;
   color: var(--fg);
+  position: relative;
+  cursor: default;
+}
+.intro h1::after {
+  content: '\2726';
+  position: absolute;
+  bottom: -0.3em;
+  left: -1em;
+  font-size: 1.1rem;
+  color: var(--accent-2);
+  opacity: 0;
+}
+@media (hover: hover) {
+  .intro h1:hover::after {
+    animation: shuriken-slide 1.5s ease-in-out forwards;
+  }
+}
+@media (hover: none) {
+  .intro h1.shuriken-trigger::after {
+    animation: shuriken-slide 1.5s ease-in-out forwards;
+  }
+}
+@keyframes shuriken-slide {
+  0%   { left: -1em; opacity: 0; transform: rotate(0deg); }
+  10%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { left: calc(100% + 0.5em); opacity: 0; transform: rotate(540deg); }
 }
 .intro h1 .accent { color: var(--accent-2); }
 .intro .lede {

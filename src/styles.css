@@ -121,8 +121,8 @@ main.wrap { flex: 1; }
   align-items: center;
   padding: 0.375rem 1rem;
   border-radius: 999px;
-  background: #9af0f9;
-  color: #002022;
+  background: var(--accent-2);
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -253,17 +253,17 @@ main.wrap { flex: 1; }
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1.25rem;
-  background: #9af0f9;
+  background: var(--accent-2);
   color: #fff;
-  border: 1px solid #9af0f9;
+  border: 1px solid var(--accent-2);
   border-radius: 999px;
   font-size: 0.875rem;
   font-weight: 600;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 .project .links a:hover {
-  background: #6adce8;
-  border-color: #6adce8;
+  background: #1558c0;
+  border-color: #1558c0;
   color: #fff;
 }
 
@@ -294,7 +294,7 @@ main.wrap { flex: 1; }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #9af0f9;
+  background: var(--accent-2);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -308,7 +308,7 @@ main.wrap { flex: 1; }
   justify-content: center;
   transition: background 0.2s ease;
 }
-.carousel-btn:hover { background: #6adce8; }
+.carousel-btn:hover { background: #1558c0; }
 .carousel-prev { left: 0.75rem; }
 .carousel-next { right: 0.75rem; }
 .carousel-controls {
@@ -334,7 +334,7 @@ main.wrap { flex: 1; }
 }
 .carousel-dot.active { background: var(--accent-2); }
 .carousel-playpause {
-  background: #9af0f9;
+  background: var(--accent-2);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -346,7 +346,7 @@ main.wrap { flex: 1; }
   justify-content: center;
   transition: background 0.2s ease;
 }
-.carousel-playpause:hover { background: #6adce8; }
+.carousel-playpause:hover { background: #1558c0; }
 
 /* Summary & Challenges sections */
 .project .summary,

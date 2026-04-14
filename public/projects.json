@@ -78,5 +78,39 @@
     "challenges": "Early versions of the platform face challenges in delivering core functionality such as a multi-step seller intake form, reliable email routing to cash buyers, basic CRM tracking, and a simple admin dashboard to manage submissions.",
     "challenges1": "Beyond development, building a strong investor network and handling sensitive seller data introduce business and privacy hurdles, while also requiring an agent-matching fallback when cash offers don’t meet seller expectations.",
     "challenges2": "Additionally, the MVP has little technical moat and risks being over-engineered, making execution, partnerships, and user trust the biggest challenges in the initial phase."
+  },
+  {
+    "title": "Find My Agent",
+    "tileSummary": "A platform that matches homeowners with the most qualified real estate agent for their specific situation.",
+    "longSummary": "This platform is designed to eliminate the guesswork in choosing a real estate agent by connecting homeowners with specialists who have proven experience in specific scenarios such as VA loans, probate, divorce, and investment properties.",
+    "longSummary1": "Instead of presenting users with a broad directory, it uses a structured intake process and data-driven matching system to identify the single most qualified agent for each unique situation.",
+    "longSummary2": "By focusing on precision over volume, the platform ensures that users are paired with professionals who understand the nuances of their needs, delivering a more efficient, personalized, and high-confidence real estate experience.",
+    "repo": "https://github.com/Juanfnmb1LPT/Agent-Matching-Leads",
+    "live": "https://juanfnmb1lpt.github.io/Agent-Matching-Leads/",
+    "tileImage": "images/FindMyAgent.png",
+    "supportingImages": [
+      "images/FindMyAgent-2.png",
+      "images/FindMyAgent-3.png"
+    ],
+    "challenges": "Early versions of the platform face challenges in building a reliable and complete agent dataset with verified specialization and performance metrics to support accurate matching.",
+    "challenges1": "Designing a matching system that feels truly personalized—without overcomplicating the logic—is also a key hurdle, especially at the MVP stage.",
+    "challenges2": "Additionally, establishing trust in the \u201csingle match\u201d approach and ensuring consistent communication between users and agents are critical to adoption and long-term success."
+  },
+  {
+    "title": "Text-Based Lead Capture",
+    "tileSummary": "A text-based real estate platform that captures buyer intent by instantly delivering property details via SMS and connecting them with agents.",
+    "longSummary": "This platform is designed to bridge offline and online real estate engagement by allowing users to instantly access property information through a simple text message. By texting a memorable short code, users can receive real-time details such as pricing, photos, and property specs without needing apps or logins.",
+    "longSummary1": "The system captures high-intent buyers at the exact moment of interest—whether they’re viewing a yard sign, billboard, or advertisement—and routes inquiries directly to local agents for follow-up.",
+    "longSummary2": "By combining speed, simplicity, and direct agent connection, the platform transforms passive interest into immediate, actionable leads while creating a seamless mobile-first property discovery experience.",
+    "repo": "https://github.com/Juanfnmb1LPT/35353",
+    "live": "https://juanfnmb1lpt.github.io/35353/",
+    "tileImage": "images/TextBasedLeads.png",
+    "supportingImages": [
+      "images/TextBasedLeads-2.png",
+      "images/TextBasedLeads-3.png"
+    ],
+    "challenges": "Early versions of the platform face challenges around setting up reliable SMS infrastructure, including short code registration, Twilio integration, and strict TCPA compliance for messaging.",
+    "challenges1": "Building accurate keyword-based routing and ensuring fast, consistent delivery of property data—especially without full MLS integration—are also key hurdles at the MVP stage.",
+    "challenges2": "Additionally, coordinating agent routing, avoiding keyword conflicts, and establishing a scalable system for notifications and lead handling are critical for long-term success."
   }
 ]

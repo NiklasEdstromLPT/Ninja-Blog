@@ -253,16 +253,18 @@ main.wrap { flex: 1; }
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1.25rem;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
+  background: #9af0f9;
+  color: #fff;
+  border: 1px solid #9af0f9;
   border-radius: 999px;
   font-size: 0.875rem;
   font-weight: 600;
-  transition: border-color 0.15s ease, color 0.15s ease;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 .project .links a:hover {
-  border-color: var(--accent-2);
-  color: var(--accent-2);
+  background: #6adce8;
+  border-color: #6adce8;
+  color: #fff;
 }
 
 /* Carousel */
@@ -272,7 +274,7 @@ main.wrap { flex: 1; }
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--bg-elev-2);
-  max-width: 600px;
+  max-width: 100%;
 }
 .carousel-slide {
   aspect-ratio: 16 / 10;
@@ -292,7 +294,7 @@ main.wrap { flex: 1; }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.45);
+  background: #9af0f9;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -304,16 +306,21 @@ main.wrap { flex: 1; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.15s ease;
+  transition: background 0.2s ease;
 }
-.carousel-btn:hover { background: rgba(0, 0, 0, 0.65); }
+.carousel-btn:hover { background: #6adce8; }
 .carousel-prev { left: 0.75rem; }
 .carousel-next { right: 0.75rem; }
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+}
 .carousel-dots {
   display: flex;
-  justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 0;
 }
 .carousel-dot {
   width: 10px;
@@ -326,6 +333,20 @@ main.wrap { flex: 1; }
   transition: background 0.15s ease;
 }
 .carousel-dot.active { background: var(--accent-2); }
+.carousel-playpause {
+  background: #9af0f9;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+.carousel-playpause:hover { background: #6adce8; }
 
 /* Summary & Challenges sections */
 .project .summary,

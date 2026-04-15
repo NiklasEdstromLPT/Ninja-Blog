@@ -1,10 +1,11 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useProjects } from '../hooks/useProjects.js';
 import { projectSlug, projectImageUrl, isVideo } from '../lib/projects.js';
 
 export default function Project() {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const { projects, error } = useProjects();
   const [slide, setSlide] = useState(0);
   const [playing, setPlaying] = useState(true);
@@ -97,6 +98,10 @@ export default function Project() {
 
   return (
     <article className="project">
+      <button className="back-btn" onClick={() => navigate(-1)}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Back
+      </button>
       <h1>{project.title}</h1>
 
       {(project.live || project.repo) && (

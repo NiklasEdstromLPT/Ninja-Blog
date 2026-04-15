@@ -3,20 +3,39 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useProjects } from '../hooks/useProjects.js';
 import ProjectTile from '../components/ProjectTile.jsx';
 
+const KEY = 'ninja-home-prefs';
+const loadPrefs = () => {
+  try { return JSON.parse(sessionStorage.getItem(KEY)) || {}; } catch { return {}; }
+};
+const savePrefs = (patch) => {
+  const prefs = { ...loadPrefs(), ...patch };
+  sessionStorage.setItem(KEY, JSON.stringify(prefs));
+  return prefs;
+};
+
 export default function Home() {
   const { projects, error } = useProjects();
-  const [sort, setSort] = useState('none'); // 'none' | 'az' | 'za'
-  const [dateSort, setDateSort] = useState('newest'); // 'newest' | 'oldest' | null
-  const [view, setView] = useState('showcase'); // 'showcase' | 'all'
+  const saved = loadPrefs();
+  const [sort, setSort] = useState(saved.sort || 'none');
+  const [dateSort, setDateSort] = useState(saved.dateSort ?? null);
+  const [view, setView] = useState(saved.view || 'showcase');
 
 
   const cycleSort = () => {
-    setSort((s) => (s === 'none' ? 'az' : s === 'az' ? 'za' : 'none'));
+    setSort((s) => {
+      const next = s === 'none' ? 'az' : s === 'az' ? 'za' : 'none';
+      savePrefs({ sort: next, dateSort: null });
+      return next;
+    });
     setDateSort(null);
   };
 
   const cycleDateSort = () => {
-    setDateSort((d) => (d === null ? 'newest' : d === 'newest' ? 'oldest' : null));
+    setDateSort((d) => {
+      const next = d === null ? 'newest' : d === 'newest' ? 'oldest' : null;
+      savePrefs({ dateSort: next, sort: 'none' });
+      return next;
+    });
     setSort('none');
   };
 
@@ -61,11 +80,11 @@ export default function Home() {
         <div className="view-toggle">
           <button
             className={`view-btn${view === 'showcase' ? ' active' : ''}`}
-            onClick={() => setView('showcase')}
+            onClick={() => { setView('showcase'); savePrefs({ view: 'showcase' }); }}
           >Showcase</button>
           <button
             className={`view-btn${view === 'all' ? ' active' : ''}`}
-            onClick={() => setView('all')}
+            onClick={() => { setView('all'); savePrefs({ view: 'all' }); }}
           >All</button>
         </div>
       </section>

@@ -12,7 +12,19 @@ Edit [public/projects.json](public/projects.json) and append an object to the ar
 {
   "title": "My Project",
   "tileSummary": "Short description for the tile.",
-  "longSummary": "Longer description for the project page.",
+  "text": [
+    {
+      "title": "Summary",
+      "paragraphs": [
+        "A short opening paragraph.",
+        "A supporting paragraph with more context."
+      ]
+    },
+    {
+      "title": "Challenges",
+      "paragraphs": ["One or more challenge paragraphs."]
+    }
+  ],
   "tileImage": "images/my-thumb.png",
   "supportingImages": ["images/shot1.png", "images/shot2.png"],
   "live": "https://example.com",
@@ -23,7 +35,8 @@ Edit [public/projects.json](public/projects.json) and append an object to the ar
 
 - `title` — required. Also drives the URL slug (lowercased, non-alphanumerics become `-`).
 - `tileSummary` — optional short text shown on the home tile.
-- `longSummary` — optional detailed text shown on the project page.
+- `text` — recommended. An array of section objects each with `title` and `paragraphs` (an array of strings) used to render headers and paragraph breaks on the project page.
+- `longSummary` — legacy: optional detailed text shown on the project page (the app still falls back to this if `text` is absent).
 - `tileImage` — optional image shown on the home tile.
 - `supportingImages` — optional gallery images shown on the project page.
 - `summary` — optional legacy fallback used when `tileSummary`/`longSummary` are not provided.

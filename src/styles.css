@@ -527,6 +527,7 @@ main.wrap { flex: 1; }
 }
 
 @media (max-width: 540px) {
+  .intro { padding-top: 2.5rem; }
   .intro h1 { font-size: 2.25rem; }
   .project h1 { font-size: 1.75rem; }
   .project-date { font-size: 1.03rem; }

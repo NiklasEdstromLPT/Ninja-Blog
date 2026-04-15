@@ -1,6 +1,7 @@
 [
   {
     "title": "Shop Squared",
+    "date": "01-05-2026",
     "tileSummary": "Inventory management app for ecommerce and event workflows.",
     "text": [
       {
@@ -11,8 +12,8 @@
         ]
       }
     ],
-    "live": "https://example.com",
-    "repo": "https://github.com/your-org/example-one",
+    "live": "https://juanfnmb1lpt.github.io/Shop-Squared/#/",
+    "repo": "https://github.com/Juanfnmb1LPT/Shop-Squared",
     "tileImage": "images/shop-squared.png",
     "supportingImages": [
       "images/shop-squared-2.png",
@@ -21,6 +22,7 @@
   },
   {
     "title": "Zoom Bot",
+    "date": "02-12-2026",
     "tileSummary": "A bot that integrates with OBS Studio in Zoom meetings to trigger automated responses, visuals, and sound effects.",
     "text": [
       {
@@ -40,6 +42,7 @@
   },
   {
     "title": "Ninja Blog",
+    "date": "03-03-2026",
     "tileSummary": "The site you're looking at.",
     "text": [
       {
@@ -53,6 +56,7 @@
   },
   {
     "title": "Ninja Internal Demos",
+    "date": "04-20-2026",
     "tileSummary": "Internal index of real estate lead generation demos, organized by team member.",
     "text": [
       {
@@ -70,6 +74,7 @@
   },
   {
     "title": "Direct Mail Sphere",
+    "date": "05-10-2026",
     "tileSummary": "A full-stack platform for real estate agents to create targeted direct mail campaigns.",
     "text": [
       {
@@ -90,6 +95,7 @@
   },
   {
     "title": "Lofty Forms",
+    "date": "06-15-2026",
     "tileSummary": "Dynamic onboarding forms with an admin panel, per-office QR codes, and live Lofty API integration.",
     "text": [
       {
@@ -109,6 +115,7 @@
   },
   {
     "title": "BuyMyHouse",
+    "date": "07-22-2026",
     "showcase": true,
     "tileSummary": "A platform that captures motivated sellers, connects them with buyers or specialists, and offers sale paths based on their needs.",
     "text": [
@@ -139,6 +146,7 @@
   },
   {
     "title": "Find My Agent",
+    "date": "08-08-2026",
     "showcase": true,
     "tileSummary": "A platform that matches homeowners with the most qualified real estate agent for their specific situation.",
     "text": [
@@ -169,6 +177,7 @@
   },
   {
     "title": "Text-Based Lead Capture",
+    "date": "09-14-2026",
     "showcase": true,
     "tileSummary": "A text-based real estate platform that captures buyer intent by instantly delivering property details via SMS and connecting them with agents.",
     "text": [
@@ -199,6 +208,7 @@
   },
   {
     "title": "Military Leads",
+    "date": "10-30-2026",
     "tileSummary": "A lead-matching platform that pairs active-duty members, veterans, and military families with real estate agents who specialize in VA loans and PCS moves.",
     "text": [
       {
@@ -242,6 +252,7 @@
   },
   {
     "title": "PreApprove",
+    "date": "11-11-2026",
     "tileSummary": "A mortgage preapproval matching service that routes borrowers into the right loan program and hands them to 2\u20133 vetted lenders \u2014 no hard credit pull.",
     "text": [
       {

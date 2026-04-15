@@ -184,6 +184,7 @@ main.wrap { flex: 1; }
   100% { left: calc(100% + 0.5em); opacity: 0; transform: rotate(540deg); }
 }
 .intro h1 .accent { color: var(--accent-2); }
+.intro h1 .accent-dark { color: var(--accent); }
 .intro .lede {
   color: var(--fg-muted);
   font-size: 1.125rem;
@@ -316,6 +317,25 @@ main.wrap { flex: 1; }
   color: var(--fg-muted);
   font-size: 0.875rem;
   line-height: 1.6;
+}
+
+/* Tile date badge */
+.tile-date {
+  display: block;
+  margin-top: auto;
+  color: var(--fg);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+/* Project page date */
+.project-date {
+  color: var(--fg-muted);
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
 }
 
 .loading, .empty {
@@ -509,6 +529,7 @@ main.wrap { flex: 1; }
 @media (max-width: 540px) {
   .intro h1 { font-size: 2.25rem; }
   .project h1 { font-size: 1.75rem; }
+  .project-date { font-size: 1.03rem; }
   .wrap { padding: 0 1.25rem; }
   .carousel-slide img,
   .carousel-slide video { max-height: 280px; }

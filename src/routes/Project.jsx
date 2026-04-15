@@ -173,6 +173,9 @@ export default function Project() {
             : section.text && <p>{section.text}</p>}
         </section>
       ))}
+        {project.date && (
+        <div className="project-date">Posted on {project.date}</div>
+      )}
     </article>
   );
 }

@@ -26,6 +26,9 @@ export default function ProjectTile({ project }) {
       <div className="tile-body">
         <h2 className="tile-title">{project.title}</h2>
         {tileSummary && <p className="tile-summary">{tileSummary}</p>}
+        {project.date && (
+          <time className="tile-date" dateTime={project.date}>{project.date}</time>
+        )}
       </div>
     </Link>
   );

@@ -1,7 +1,7 @@
 [
   {
     "title": "Shop Squared",
-    "date": "01-05-2026",
+    "date": "04-08-2026",
     "tileSummary": "Inventory management app for ecommerce and event workflows.",
     "text": [
       {
@@ -22,7 +22,7 @@
   },
   {
     "title": "Zoom Bot",
-    "date": "02-12-2026",
+    "date": "04-05-2026",
     "tileSummary": "A bot that integrates with OBS Studio in Zoom meetings to trigger automated responses, visuals, and sound effects.",
     "text": [
       {
@@ -42,7 +42,7 @@
   },
   {
     "title": "Ninja Blog",
-    "date": "03-03-2026",
+    "date": "04-07-2026",
     "tileSummary": "The site you're looking at.",
     "text": [
       {
@@ -56,7 +56,7 @@
   },
   {
     "title": "Ninja Internal Demos",
-    "date": "04-20-2026",
+    "date": "04-09-2026",
     "tileSummary": "Internal index of real estate lead generation demos, organized by team member.",
     "text": [
       {
@@ -74,7 +74,7 @@
   },
   {
     "title": "Direct Mail Sphere",
-    "date": "05-10-2026",
+    "date": "04-06-2026",
     "tileSummary": "A full-stack platform for real estate agents to create targeted direct mail campaigns.",
     "text": [
       {
@@ -95,7 +95,7 @@
   },
   {
     "title": "Lofty Forms",
-    "date": "06-15-2026",
+    "date": "04-04-2026",
     "tileSummary": "Dynamic onboarding forms with an admin panel, per-office QR codes, and live Lofty API integration.",
     "text": [
       {
@@ -115,7 +115,7 @@
   },
   {
     "title": "BuyMyHouse",
-    "date": "07-22-2026",
+    "date": "04-15-2026",
     "showcase": true,
     "tileSummary": "A platform that captures motivated sellers, connects them with buyers or specialists, and offers sale paths based on their needs.",
     "text": [
@@ -146,7 +146,7 @@
   },
   {
     "title": "Find My Agent",
-    "date": "08-08-2026",
+    "date": "04-14-2026",
     "showcase": true,
     "tileSummary": "A platform that matches homeowners with the most qualified real estate agent for their specific situation.",
     "text": [
@@ -177,7 +177,7 @@
   },
   {
     "title": "Text-Based Lead Capture",
-    "date": "09-14-2026",
+    "date": "04-13-2026",
     "showcase": true,
     "tileSummary": "A text-based real estate platform that captures buyer intent by instantly delivering property details via SMS and connecting them with agents.",
     "text": [
@@ -208,7 +208,7 @@
   },
   {
     "title": "Military Leads",
-    "date": "10-30-2026",
+    "date": "04-12-2026",
     "tileSummary": "A lead-matching platform that pairs active-duty members, veterans, and military families with real estate agents who specialize in VA loans and PCS moves.",
     "text": [
       {
@@ -252,7 +252,7 @@
   },
   {
     "title": "PreApprove",
-    "date": "11-11-2026",
+    "date": "04-11-2026",
     "tileSummary": "A mortgage preapproval matching service that routes borrowers into the right loan program and hands them to 2\u20133 vetted lenders \u2014 no hard credit pull.",
     "text": [
       {
@@ -293,6 +293,52 @@
     "tileImage": "images/PreApproval.png",
     "supportingImages": [
       "images/PreApproval-2.png"
+    ]
+  },
+  {
+    "title": "FSBO Support",
+    "date": "04-10-2026",
+    "tileSummary": "A support-oriented toolkit and education site for homeowners selling independently \u2014 pricing, listing, and offer-handling guidance without the agent-commission pitch.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "FSBO Support is the For Sale By Owner vertical of the HomeValue Digital Network, built as a value-first toolkit for the roughly 7\u201310% of home sales that start without an agent. Rather than pitching an agent upfront, it positions as free support \u2014 pricing help, listing templates, and offer-handling guidance \u2014 with the promise that a seller can get listing-ready in about 30 minutes.",
+          "The experience is structured around the three stages of a FSBO sale: price it right (using a valuation tool backed by recent local sales), list it properly (photography checklist, listing description template, platform guidance), and handle offers yourself (offer review and negotiation guide). A home valuation form collects address, name, email, optional phone, and current stage (thinking, planning, listed, struggling), and confirms that a valuation summary is on the way.",
+          "Within the ecosystem, FSBO Support captures independent-minded sellers who resist traditional agent outreach and builds the trust needed for later conversion. When the DIY path stalls \u2014 stale listing, offer fell through, inspection surprise \u2014 the stage field on the form becomes the natural trigger for handing the seller into agent matching or the cash offer vertical."
+        ]
+      },
+      {
+        "title": "Challenges",
+        "paragraphs": [
+          "FSBO sellers are explicitly DIY-minded and allergic to conversion pressure. The \"support over sales\" positioning has to be real \u2014 if the tools are thin or the downloads are gated behind aggressive lead capture, the page becomes indistinguishable from adversarial competitors like FSBO.com, ForSaleByOwner.com, or the Zillow FSBO surface.",
+          "Pricing accuracy is the central promise. \"Analyze recent local sales data\" requires an AVM or comparable-sales feed behind the valuation form; without it, the tool is a lead-capture form with a promise attached, and a pricing miss is the single fastest way to lose seller trust.",
+          "FSBO sales have a predictable frustration point \u2014 most FSBO attempts end with an agent or a sale below market. Timing the pivot to agent matching or a cash offer without feeling opportunistic is a CRM and messaging problem, not a content one, and it's where the ecosystem handoff either works or feels like a bait-and-switch."
+        ]
+      },
+      {
+        "title": "Needed Tech",
+        "paragraphs": [
+          "An AVM or comparable-sales data source (ATTOM, HouseCanary, or direct MLS integration) to back the valuation form's \"recent local sales\" claim \u2014 and eventually power the pricing checklist with specific numbers rather than generic guidance.",
+          "Actual downloadable assets and a delivery path. The Pricing Checklist, Listing Description Template, and Offer Review Guide are referenced today but the links read as placeholders. Email-gated delivery is nurture-friendly; direct download is friction-free. The trade-off is worth picking deliberately.",
+          "Form submission backend and CRM with stage-aware triggers: the form already captures where the seller is in the journey (thinking / planning / listed / struggling). Storing that and triggering follow-up when the seller self-reports \"struggling\" is the mechanism that turns FSBO Support into a live pipeline feeder for agent matching and cash offers.",
+          "Long-tail SEO content depth. The PDF identifies \"how to\" content as the FSBO vertical's SEO advantage \u2014 each stage (pricing, photography, MLS posting, contract-to-close) should eventually exist as a real article, not a section header."
+        ]
+      },
+      {
+        "title": "Current State",
+        "paragraphs": [
+          "Deployed as a static site on GitHub Pages \u2014 a single index.html, no frameworks, no build step, no backend in the repo.",
+          "The home valuation form and the three-step content frame (price \u2192 list \u2192 handle offers) are in place, and the valuation submission shows a success confirmation promising a summary. The downloadable resources and the \"Know When to Call an Agent\" criteria are present as content references rather than fully developed assets, and the valuation form doesn't yet have a visible backend, AVM feed, or CRM destination wired up.",
+          "Current build is a polished front door for the FSBO journey ahead of the data sources, asset production, and backend plumbing needed to fulfill on the toolkit promise and feed the downstream ecosystem."
+        ]
+      }
+    ],
+    "live": "https://niklasedstromlpt.github.io/NIKFSBO/",
+    "repo": "https://github.com/NiklasEdstromLPT/NIKFSBO",
+    "tileImage": "images/FSBO.png",
+    "supportingImages": [
+      "images/FSBO-2.png"
     ]
   }
 ]

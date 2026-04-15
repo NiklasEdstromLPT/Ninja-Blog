@@ -2,8 +2,15 @@
   {
     "title": "Shop Squared",
     "tileSummary": "Inventory management app for ecommerce and event workflows.",
-    "longSummary": "A browser-based inventory management app built with Vue 3 and Vite, designed initially for our Spring Con inventory. It combines a fast, clean frontend with a Node-based architecture and a Supabase backend to manage bins, items, and product variations efficiently.",
-    "longSummary1": "The app includes a login system with session persistence, uses GitHub secrets to protect sensitive configuration, and processes CSV/XLSX files entirely in the browser for secure, client-side data handling, making it a practical tool for real-time inventory tracking in ecommerce and event environments.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "A browser-based inventory management app built with Vue 3 and Vite, designed initially for our Spring Con inventory. It combines a fast, clean frontend with a Node-based architecture and a Supabase backend to manage bins, items, and product variations efficiently.",
+          "The app includes a login system with session persistence, uses GitHub secrets to protect sensitive configuration, and processes CSV/XLSX files entirely in the browser for secure, client-side data handling, making it a practical tool for real-time inventory tracking in ecommerce and event environments."
+        ]
+      }
+    ],
     "live": "https://example.com",
     "repo": "https://github.com/your-org/example-one",
     "tileImage": "images/shop-squared.png",
@@ -15,8 +22,15 @@
   {
     "title": "Zoom Bot",
     "tileSummary": "A bot that integrates with OBS Studio in Zoom meetings to trigger automated responses, visuals, and sound effects.",
-    "longSummary": "The Zoom Bot is a Node.js application that connects to Zoom meetings using the Zoom API and integrates with OBS Studio to create interactive meeting experiences.",
-    "longSummary1": "It listens for specific triggers in the meeting, such as chat messages or participant actions, and responds by activating predefined scenes, visuals, or sound effects in OBS. This allows for dynamic presentations, engaging webinars, and enhanced virtual events by automating responses based on real-time meeting interactions.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "The Zoom Bot is a Node.js application that connects to Zoom meetings using the Zoom API and integrates with OBS Studio to create interactive meeting experiences.",
+          "It listens for specific triggers in the meeting, such as chat messages or participant actions, and responds by activating predefined scenes, visuals, or sound effects in OBS. This allows for dynamic presentations, engaging webinars, and enhanced virtual events by automating responses based on real-time meeting interactions."
+        ]
+      }
+    ],
     "videos": ["videos/zoom-bot.mp4", "videos/zoom-bot-2.mp4"],
     "tileImage": "images/zoom-bot.png",
     "repo": "https://github.com/Juanfnmb1LPT/zoom_bot"
@@ -24,15 +38,29 @@
   {
     "title": "Ninja Blog",
     "tileSummary": "The site you're looking at.",
-    "longSummary": "Ninja Blog is a personal project showcasing various web development skills and projects. It serves as a portfolio and a platform to share insights, tutorials, and updates on ongoing projects.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "Ninja Blog is a personal project showcasing various web development skills and projects. It serves as a portfolio and a platform to share insights, tutorials, and updates on ongoing projects."
+        ]
+      }
+    ],
     "repo": "https://github.com/your-org/ninja-blog"
   },
   {
     "title": "Ninja Internal Demos",
     "tileSummary": "Internal index of real estate lead generation demos, organized by team member.",
-    "longSummary": "A central hub for the HomeValue Digital Network's real estate lead generation ecosystem, built as a lightweight static site and deployed via GitHub Pages.",
-    "longSummary1": "It indexes live demo implementations across ten lead-gen verticals \u2014 military, pre-approval, FSBO, title verification, investor leads, agent matching, direct home purchase, home valuation for sellers, IDX search and alerts, and text-based lead capture \u2014 with each category linked to working pages from team members Nik, Juan, and Ryan.",
-    "longSummary2": "The site is intended for internal review and demonstration only, giving the team a single jumping-off point to compare implementations side by side.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "A central hub for the HomeValue Digital Network's real estate lead generation ecosystem, built as a lightweight static site and deployed via GitHub Pages.",
+          "It indexes live demo implementations across ten lead-gen verticals — military, pre-approval, FSBO, title verification, investor leads, agent matching, direct home purchase, home valuation for sellers, IDX search and alerts, and text-based lead capture — with each category linked to working pages from team members Nik, Juan, and Ryan.",
+          "The site is intended for internal review and demonstration only, giving the team a single jumping-off point to compare implementations side by side."
+        ]
+      }
+    ],
     "live": "https://niklasedstromlpt.github.io/NinjaLeadEcosystem/",
     "repo": "https://github.com/NiklasEdstromLPT/NinjaLeadEcosystem",
     "tileImage": "images/Internal-Demo.png"
@@ -40,9 +68,16 @@
   {
     "title": "Direct Mail Sphere",
     "tileSummary": "A full-stack platform for real estate agents to create targeted direct mail campaigns.",
-    "longSummary": "Direct Mail Sphere is a full-stack web application built with Vue 3 (Vite) on the frontend and Node.js/Express on the backend, designed as a portal for real estate agents to create and manage targeted direct mail campaigns.",
-    "longSummary1": "It features both a client-facing interface for building campaigns and an admin portal for managing and tracking orders, along with secure authentication, email verification, and email integration via Resend.",
-    "longSummary2": "The system generates structured CSV files that integrate directly with FusionPro, enabling automated PDF creation and streamlining the workflow from campaign setup to print production and delivery.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "Direct Mail Sphere is a full-stack web application built with Vue 3 (Vite) on the frontend and Node.js/Express on the backend, designed as a portal for real estate agents to create and manage targeted direct mail campaigns.",
+          "It features both a client-facing interface for building campaigns and an admin portal for managing and tracking orders, along with secure authentication, email verification, and email integration via Resend.",
+          "The system generates structured CSV files that integrate directly with FusionPro, enabling automated PDF creation and streamlining the workflow from campaign setup to print production and delivery."
+        ]
+      }
+    ],
     "repo": "https://github.com/Juanfnmb1LPT/Direct-Mail-Sphere",
     "tileImage": "images/mail-sphere.png",
     "supportingImages": [
@@ -53,67 +88,110 @@
   {
     "title": "Lofty Forms",
     "tileSummary": "Dynamic onboarding forms with an admin panel, per-office QR codes, and live Lofty API integration.",
-    "longSummary": "A dynamic form application built to streamline office onboarding workflows. The admin panel pulls offices in real time from the Lofty API through a Node.js/Express proxy, lets an admin toggle which social and link fields appear, and generates a unique form URL plus a downloadable QR code for each office.",
-    "longSummary1": "The form itself is a Vue 3 (Vite) single-page app driven by a 27-field config file, with per-field validation for names, emails, phone numbers, URLs, and integers, real-time format hints, and an office field that auto-fills from the URL slug. Submissions come back as a CSV named after the office and submitter.",
-    "longSummary2": "Credentials live in a backend .env file so the Lofty API key never reaches the browser. Planned next steps include Supabase-backed submission storage, role-based auth for admins and team leaders, and caching of office data to reduce API calls.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "A dynamic form application built to streamline office onboarding workflows. The admin panel pulls offices in real time from the Lofty API through a Node.js/Express proxy, lets an admin toggle which social and link fields appear, and generates a unique form URL plus a downloadable QR code for each office.",
+          "The form itself is a Vue 3 (Vite) single-page app driven by a 27-field config file, with per-field validation for names, emails, phone numbers, URLs, and integers, real-time format hints, and an office field that auto-fills from the URL slug. Submissions come back as a CSV named after the office and submitter.",
+          "Credentials live in a backend .env file so the Lofty API key never reaches the browser. Planned next steps include Supabase-backed submission storage, role-based auth for admins and team leaders, and caching of office data to reduce API calls."
+        ]
+      }
+    ],
     "repo": "https://github.com/NiklasEdstromLPT/Forms",
     "tileImage": "images/Forms.png",
     "supportingImages": [
       "images/Forms-2.png"
     ]
   },
-    {
+  {
     "title": "BuyMyHouse",
     "showcase": true,
     "tileSummary": "A platform that captures motivated sellers, connects them with buyers or specialists, and offers sale paths based on their needs.",
-    "longSummary": "The purpose of this platform is to provide homeowners with a flexible, modern selling experience that reflects today’s real estate market, where cash offers and traditional listings coexist. As the space has evolved beyond early players like Opendoor and Offerpad, sellers now expect multiple paths when considering a sale.",
-    "longSummary1": "This platform acts as a neutral, intent-driven hub that captures motivated sellers, connects them with a potential buyer or specialist, and presents tailored options—whether that’s evaluating competitive cash offers from a network of investors or pursuing a full market listing.",
-    "longSummary2": "By combining streamlined technology with real human expertise, it creates a seamless bridge between alternative selling methods and traditional real estate, giving sellers the clarity and control to choose the best path forward.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "The purpose of this platform is to provide homeowners with a flexible, modern selling experience that reflects today’s real estate market, where cash offers and traditional listings coexist. As the space has evolved beyond early players like Opendoor and Offerpad, sellers now expect multiple paths when considering a sale.",
+          "This platform acts as a neutral, intent-driven hub that captures motivated sellers, connects them with a potential buyer or specialist, and presents tailored options—whether that’s evaluating competitive cash offers from a network of investors or pursuing a full market listing.",
+          "By combining streamlined technology with real human expertise, it creates a seamless bridge between alternative selling methods and traditional real estate, giving sellers the clarity and control to choose the best path forward."
+        ]
+      },
+      {
+        "title": "Challenges",
+        "paragraphs": [
+          "Early versions of the platform face challenges in delivering core functionality such as a multi-step seller intake form, reliable email routing to cash buyers, basic CRM tracking, and a simple admin dashboard to manage submissions.",
+          "Beyond development, building a strong investor network and handling sensitive seller data introduce business and privacy hurdles, while also requiring an agent-matching fallback when cash offers don’t meet seller expectations.",
+          "Additionally, the MVP has little technical moat and risks being over-engineered, making execution, partnerships, and user trust the biggest challenges in the initial phase."
+        ]
+      }
+    ],
     "repo": "https://github.com/Juanfnmb1LPT/buymyhouse",
     "live": "https://juanfnmb1lpt.github.io/buymyhouse/",
     "tileImage": "images/BuyMyHouse.png",
     "supportingImages": [
       "images/BuyMyHouse-2.png",
       "images/BuyMyHouse-3.png"
-    ],
-    "challenges": "Early versions of the platform face challenges in delivering core functionality such as a multi-step seller intake form, reliable email routing to cash buyers, basic CRM tracking, and a simple admin dashboard to manage submissions.",
-    "challenges1": "Beyond development, building a strong investor network and handling sensitive seller data introduce business and privacy hurdles, while also requiring an agent-matching fallback when cash offers don’t meet seller expectations.",
-    "challenges2": "Additionally, the MVP has little technical moat and risks being over-engineered, making execution, partnerships, and user trust the biggest challenges in the initial phase."
+    ]
   },
   {
     "title": "Find My Agent",
     "showcase": true,
     "tileSummary": "A platform that matches homeowners with the most qualified real estate agent for their specific situation.",
-    "longSummary": "This platform is designed to eliminate the guesswork in choosing a real estate agent by connecting homeowners with specialists who have proven experience in specific scenarios such as VA loans, probate, divorce, and investment properties.",
-    "longSummary1": "Instead of presenting users with a broad directory, it uses a structured intake process and data-driven matching system to identify the single most qualified agent for each unique situation.",
-    "longSummary2": "By focusing on precision over volume, the platform ensures that users are paired with professionals who understand the nuances of their needs, delivering a more efficient, personalized, and high-confidence real estate experience.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "This platform is designed to eliminate the guesswork in choosing a real estate agent by connecting homeowners with specialists who have proven experience in specific scenarios such as VA loans, probate, divorce, and investment properties.",
+          "Instead of presenting users with a broad directory, it uses a structured intake process and data-driven matching system to identify the single most qualified agent for each unique situation.",
+          "By focusing on precision over volume, the platform ensures that users are paired with professionals who understand the nuances of their needs, delivering a more efficient, personalized, and high-confidence real estate experience."
+        ]
+      },
+      {
+        "title": "Challenges",
+        "paragraphs": [
+          "Early versions of the platform face challenges in building a reliable and complete agent dataset with verified specialization and performance metrics to support accurate matching.",
+          "Designing a matching system that feels truly personalized—without overcomplicating the logic—is also a key hurdle, especially at the MVP stage.",
+          "Additionally, establishing trust in the \"single match\" approach and ensuring consistent communication between users and agents are critical to adoption and long-term success."
+        ]
+      }
+    ],
     "repo": "https://github.com/Juanfnmb1LPT/Agent-Matching-Leads",
     "live": "https://juanfnmb1lpt.github.io/Agent-Matching-Leads/",
     "tileImage": "images/FindMyAgent.png",
     "supportingImages": [
       "images/FindMyAgent-2.png",
       "images/FindMyAgent-3.png"
-    ],
-    "challenges": "Early versions of the platform face challenges in building a reliable and complete agent dataset with verified specialization and performance metrics to support accurate matching.",
-    "challenges1": "Designing a matching system that feels truly personalized—without overcomplicating the logic—is also a key hurdle, especially at the MVP stage.",
-    "challenges2": "Additionally, establishing trust in the \u201csingle match\u201d approach and ensuring consistent communication between users and agents are critical to adoption and long-term success."
+    ]
   },
   {
     "title": "Text-Based Lead Capture",
     "showcase": true,
     "tileSummary": "A text-based real estate platform that captures buyer intent by instantly delivering property details via SMS and connecting them with agents.",
-    "longSummary": "This platform is designed to bridge offline and online real estate engagement by allowing users to instantly access property information through a simple text message. By texting a memorable short code, users can receive real-time details such as pricing, photos, and property specs without needing apps or logins.",
-    "longSummary1": "The system captures high-intent buyers at the exact moment of interest—whether they’re viewing a yard sign, billboard, or advertisement—and routes inquiries directly to local agents for follow-up.",
-    "longSummary2": "By combining speed, simplicity, and direct agent connection, the platform transforms passive interest into immediate, actionable leads while creating a seamless mobile-first property discovery experience.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "This platform is designed to bridge offline and online real estate engagement by allowing users to instantly access property information through a simple text message. By texting a memorable short code, users can receive real-time details such as pricing, photos, and property specs without needing apps or logins.",
+          "The system captures high-intent buyers at the exact moment of interest—whether they’re viewing a yard sign, billboard, or advertisement—and routes inquiries directly to local agents for follow-up.",
+          "By combining speed, simplicity, and direct agent connection, the platform transforms passive interest into immediate, actionable leads while creating a seamless mobile-first property discovery experience."
+        ]
+      },
+      {
+        "title": "Challenges",
+        "paragraphs": [
+          "Early versions of the platform face challenges around setting up reliable SMS infrastructure, including short code registration, Twilio integration, and strict TCPA compliance for messaging.",
+          "Building accurate keyword-based routing and ensuring fast, consistent delivery of property data—especially without full MLS integration—are also key hurdles at the MVP stage.",
+          "Additionally, coordinating agent routing, avoiding keyword conflicts, and establishing a scalable system for notifications and lead handling are critical for long-term success."
+        ]
+      }
+    ],
     "repo": "https://github.com/Juanfnmb1LPT/35353",
     "live": "https://juanfnmb1lpt.github.io/35353/",
     "tileImage": "images/TextBasedLeads.png",
     "supportingImages": [
       "images/TextBasedLeads-2.png",
       "images/TextBasedLeads-3.png"
-    ],
-    "challenges": "Early versions of the platform face challenges around setting up reliable SMS infrastructure, including short code registration, Twilio integration, and strict TCPA compliance for messaging.",
-    "challenges1": "Building accurate keyword-based routing and ensuring fast, consistent delivery of property data—especially without full MLS integration—are also key hurdles at the MVP stage.",
-    "challenges2": "Additionally, coordinating agent routing, avoiding keyword conflicts, and establishing a scalable system for notifications and lead handling are critical for long-term success."
+    ]
   }
 ]

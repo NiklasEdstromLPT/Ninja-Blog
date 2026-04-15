@@ -81,6 +81,16 @@ export default function Project() {
     : project.summary ? [project.summary] : [];
   const challengeParts = collectFields('challenges');
 
+  // New schema: `project.text` is an array of { title, paragraphs: [] }.
+  // Build `sections` to render: prefer `project.text`, otherwise fall back
+  // to the older `Summary`/`Challenges` fields for backward compatibility.
+  const sections = Array.isArray(project.text)
+    ? project.text
+    : [
+        ...(summaryParts.length ? [{ title: 'Summary', paragraphs: summaryParts }] : []),
+        ...(challengeParts.length ? [{ title: 'Challenges', paragraphs: challengeParts }] : []),
+      ];
+
   const current = Math.min(slide, media.length - 1);
   const prev = () => setSlide((s) => (s - 1 + media.length) % media.length);
   const next = () => setSlide((s) => (s + 1) % media.length);
@@ -155,19 +165,14 @@ export default function Project() {
         </div>
       )}
 
-      {summaryParts.length > 0 && (
-        <div className="summary">
-          <h2>Summary</h2>
-          {summaryParts.map((text, i) => <p key={i}>{text}</p>)}
-        </div>
-      )}
-
-      {challengeParts.length > 0 && (
-        <div className="challenges">
-          <h2>Challenges</h2>
-          {challengeParts.map((text, i) => <p key={i}>{text}</p>)}
-        </div>
-      )}
+      {sections.map((section, si) => (
+        <section className={`section section-${si}`} key={si}>
+          {section.title && <h2>{section.title}</h2>}
+          {Array.isArray(section.paragraphs)
+            ? section.paragraphs.map((p, pi) => <p key={pi}>{p}</p>)
+            : section.text && <p>{section.text}</p>}
+        </section>
+      ))}
     </article>
   );
 }

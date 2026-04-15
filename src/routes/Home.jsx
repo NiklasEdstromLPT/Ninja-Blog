@@ -6,7 +6,7 @@ import ProjectTile from '../components/ProjectTile.jsx';
 export default function Home() {
   const { projects, error } = useProjects();
   const [sort, setSort] = useState('none'); // 'none' | 'az' | 'za'
-  const [dateSort, setDateSort] = useState(null); // 'newest' | 'oldest' | null
+  const [dateSort, setDateSort] = useState('newest'); // 'newest' | 'oldest' | null
   const [view, setView] = useState('showcase'); // 'showcase' | 'all'
 
 

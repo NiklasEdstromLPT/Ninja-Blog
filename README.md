@@ -31,6 +31,30 @@ Edit [public/projects.json](public/projects.json) and append an object to the ar
 - `slug` — optional explicit override.
 - Everything else is optional and is hidden when absent.
 
+## Project data schema (note)
+
+The site now supports a structured `text` field for richer project pages. `text` is an array of section objects with a `title` and a `paragraphs` array. Example:
+
+```json
+"text": [
+  {
+    "title": "Summary",
+    "paragraphs": [
+      "First paragraph.",
+      "Second paragraph."
+    ]
+  },
+  {
+    "title": "Challenges",
+    "paragraphs": ["Challenge 1", "Challenge 2"]
+  }
+]
+```
+
+This format gives per-paragraph control (rendering, truncation, animations) and keeps sections (headers) alongside their paragraphs. The project page component (`src/routes/Project.jsx`) is updated to render `text` when present and will fall back to legacy `longSummary`/`challenges` fields for compatibility.
+
+If you want home tiles to pull a short description from the new schema, update `src/components/ProjectTile.jsx` to use the first paragraph of `project.text[0].paragraphs[0]` or keep using `tileSummary`.
+
 The project page lives at `/project/<slug>` — the slug (derived from the title) is literally the end of the URL.
 
 ## Running locally

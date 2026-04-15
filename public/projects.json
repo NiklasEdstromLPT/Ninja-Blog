@@ -31,7 +31,10 @@
         ]
       }
     ],
-    "videos": ["videos/zoom-bot.mp4", "videos/zoom-bot-2.mp4"],
+    "videos": [
+      "videos/zoom-bot.mp4",
+      "videos/zoom-bot-2.mp4"
+    ],
     "tileImage": "images/zoom-bot.png",
     "repo": "https://github.com/Juanfnmb1LPT/zoom_bot"
   },
@@ -192,6 +195,93 @@
     "supportingImages": [
       "images/TextBasedLeads-2.png",
       "images/TextBasedLeads-3.png"
+    ]
+  },
+  {
+    "title": "Military Leads",
+    "tileSummary": "A lead-matching platform that pairs active-duty members, veterans, and military families with real estate agents who specialize in VA loans and PCS moves.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "Military Leads is a consumer-facing lead page for the HomeValue Digital Network's military vertical. It connects active-duty members, veterans, reservists, and military spouses with a single verified real estate agent who has demonstrated experience in VA-backed transactions, PCS relocations, and military-adjacent scenarios like BAH-driven buying decisions.",
+          "The intake form captures military status, transaction need (buying, selling, PCS, refinance), target location, and contact info, and promises a specialist match within 48 hours rather than returning a list of generalists to sift through.",
+          "Alongside the matching flow, the page includes two interactive utilities: a VA loan payment calculator (home price, loan term, rate, funding fee tier) and a BAH lookup based on 2025 DoD data keyed by pay grade, dependency status, and duty station."
+        ]
+      },
+      {
+        "title": "Challenges",
+        "paragraphs": [
+          "The \"verified specialist\" promise is only as strong as the data behind it. Without access to MLS transaction history or a curated agent roster, \"VA-certified\" reduces to self-reported badges — exactly the problem the platform is positioned to solve against competitors like Zillow Agent Finder or HomeLight.",
+          "Single-match routing concentrates risk. One slow response, one bad handoff, or one mismatch erodes trust in a way that a ten-agent list does not, so the backend pipeline has to be operationally tight before scale.",
+          "Military-adjacent reference data decays. BAH rates update annually and VA funding fee tiers can shift with policy — any hard-coded 2025 values need a refresh path (live feed, scheduled update, or admin UI) or the calculators will quietly become wrong."
+        ]
+      },
+      {
+        "title": "Needed Tech",
+        "paragraphs": [
+          "A VA-specialized agent database with verified transaction history — sourced from Aperture Network intelligence, MLS integrations, or manual curation at MVP — so specialization is provable rather than claimed.",
+          "A form submission endpoint and agent-routing layer: a lightweight backend (Netlify Functions, Formspree, or a small Node/Express service) plus a CRM for intake, assignment, and SLA tracking against the 48-hour promise.",
+          "A refresh path for BAH and VA loan parameters so calculator outputs stay accurate as DoD rates and funding fees update year over year."
+        ]
+      },
+      {
+        "title": "Current State",
+        "paragraphs": [
+          "Deployed as a static site on GitHub Pages — HTML with Tailwind CSS loaded via CDN and Google Fonts (Epilogue, Manrope), no build step required.",
+          "The intake form, VA loan calculator, and BAH lookup are all wired up and interactive on the frontend. Form submissions, agent roster, and matching pipeline are not yet connected — the page is currently a demo of the consumer experience ahead of the backend and data work required to actually fulfill matches."
+        ]
+      }
+    ],
+    "live": "https://niklasedstromlpt.github.io/NikMILITARYLEADS/",
+    "repo": "https://github.com/NiklasEdstromLPT/NikMILITARYLEADS",
+    "tileImage": "images/MilitaryLeads.png",
+    "supportingImages": [
+      "images/MilitaryLeads-2.png"
+    ]
+  },
+  {
+    "title": "PreApprove",
+    "tileSummary": "A mortgage preapproval matching service that routes borrowers into the right loan program and hands them to 2\u20133 vetted lenders \u2014 no hard credit pull.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "PreApprove is a consumer-facing preapproval front door for the HomeValue Digital Network. Rather than acting as a single lender, it positions as a neutral qualification and comparison tool that matches each borrower into the right loan program \u2014 VA, FHA, USDA, Conventional, or Jumbo \u2014 and hands them off to two to three vetted lenders who specialize in that program.",
+          "The interaction is a three-step wizard. Step one assesses situation (veteran status, first-time buyer, rural/suburban property, credit strength, target price band). Step two collects details (estimated purchase price, timeline, property type, employment status, credit score range). Step three confirms the match and sets the expectation that a lending specialist will reach out within one business day.",
+          "Within the ecosystem, PreApprove is the gateway that converts browsers into qualified buyers. It feeds preapproved consumers into agent matching with verified readiness, integrates naturally with the military vertical (VA) and first-time buyer pathways (FHA), and gives the IDX and agent-matching layers a reliable signal for who is actually transaction-ready."
+        ]
+      },
+      {
+        "title": "Challenges",
+        "paragraphs": [
+          "Competing against category giants \u2014 Rocket Mortgage, Better, LoanDepot, LendingTree \u2014 the \"2\u20133 vetted lenders per program\" promise is only credible if the lender roster is real, curated, and held accountable to the one-business-day SLA. Recruiting and managing those partnerships is the hard part, not the UI.",
+          "\"Free \u00B7 No Hard Credit Pull\" is both a trust message and a technical constraint. Honoring it at scale pushes toward soft-pull APIs (Plaid, Experian, Equifax) which add integration cost and compliance surface, and until a soft pull runs, the matching engine is operating on self-reported data.",
+          "Loan program guidelines drift. Conforming loan limits, FHA county ceilings, VA funding fee tiers, and USDA eligibility maps all change \u2014 any hard-coded values in the wizard or FAQ erode trust the moment a borrower cross-checks against Bankrate or a lender site."
+        ]
+      },
+      {
+        "title": "Needed Tech",
+        "paragraphs": [
+          "A lender network and routing engine: two to three vetted lending partners per program, plus rules that map borrower inputs (credit band, loan size, geography, program eligibility) to the right partner. Without the roster, matching is a UI shell.",
+          "Form submission backend and CRM: a live endpoint (Netlify Functions, Formspree, or a light Node/Express service), a submission store, and CRM wiring so lender follow-up is tracked against the one-business-day promise rather than relying on manual handoff.",
+          "Soft-pull credit integration (Plaid, Experian, or Equifax consumer APIs) if the \"no hard credit pull\" positioning graduates from messaging into an actual prequalification score. A live feed for conforming limits, FHA ceilings, and VA funding fees keeps the wizard and FAQ accurate year over year.",
+          "Rate alert and nurture infrastructure: email or SMS triggers tied to rate movement keep long-timeline buyers engaged between first visit and close \u2014 the PDF calls this out as a key ecosystem contribution."
+        ]
+      },
+      {
+        "title": "Current State",
+        "paragraphs": [
+          "Deployed as a static site on GitHub Pages \u2014 a single index.html, no frameworks, no build step. The entire three-step wizard runs client-side and the FAQ is fleshed out with substantive answers on preapproval vs. prequalification, credit-pull behavior, and the matching methodology.",
+          "The consumer flow and content layer are effectively complete. What isn't wired: the lender roster, the form submission endpoint, the routing logic that would turn a submitted form into an actual lender handoff, and any credit-data integration. The page currently demonstrates the intended experience ahead of the partnership and backend work needed to fulfill matches."
+        ]
+      }
+    ],
+    "live": "https://niklasedstromlpt.github.io/NikPreApprove/",
+    "repo": "https://github.com/NiklasEdstromLPT/NikPreApprove",
+    "tileImage": "images/PreApproval.png",
+    "supportingImages": [
+      "images/PreApproval-2.png"
     ]
   }
 ]

@@ -42,7 +42,7 @@ export default function Project() {
 
   useEffect(() => {
     if (playing && media.length > 1) {
-      timer.current = setInterval(advance, 3000);
+      timer.current = setInterval(advance, 3500);
     }
     return () => clearInterval(timer.current);
   }, [playing, advance, media.length]);

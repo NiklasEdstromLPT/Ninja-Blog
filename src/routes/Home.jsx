@@ -22,6 +22,12 @@ export default function Home() {
 
   const normalize = (t) => t.trim().toLowerCase();
 
+  // Parse "MM-DD-YYYY" reliably (Safari/mobile rejects dashes in that format)
+  const parseDate = (d) => {
+    const [m, day, y] = d.split('-');
+    return new Date(y, m - 1, day);
+  };
+
   const filtered = projects && view === 'showcase'
     ? projects.filter((p) => p.showcase)
     : projects;
@@ -29,9 +35,9 @@ export default function Home() {
   let sorted = filtered;
   // dateSort takes precedence when active
   if (filtered && dateSort === 'newest') {
-    sorted = [...filtered].sort((a, b) => new Date(b.date) - new Date(a.date));
+    sorted = [...filtered].sort((a, b) => parseDate(b.date) - parseDate(a.date));
   } else if (filtered && dateSort === 'oldest') {
-    sorted = [...filtered].sort((a, b) => new Date(a.date) - new Date(b.date));
+    sorted = [...filtered].sort((a, b) => parseDate(a.date) - parseDate(b.date));
   } else if (filtered && sort === 'az') {
     sorted = [...filtered].sort((a, b) => normalize(a.title).localeCompare(normalize(b.title)));
   } else if (filtered && sort === 'za') {

@@ -138,12 +138,13 @@
       {
         "title": "Needed Tech",
         "paragraphs": [
-           "A backend and persistent data layer (PostgreSQL, Supabase, or Firebase) to replace mock sheets and local storage, enabling storage of seller inputs, property searches, agent assignments, and appointments across sessions and devices.",
-  "A form submission backend and CRM pipeline (Node.js/Express, serverless functions, or managed services) to capture seller intake data, route leads, and track agent follow-up within a centralized system.",
-  "Integration with real property data and comparables APIs (MLS, IDX, or third-party providers) to replace mock datasets and provide accurate, real-time address search and pricing insights.",
-  "A rules-based agent routing engine that maps seller inputs (location, price range, property type) to appropriate agents based on availability and geographic coverage.",
-  "Notification infrastructure (email/SMS via services like SendGrid or Twilio) to handle appointment confirmations, reminders, and ongoing lead nurturing after initial submission.",
-  "An admin dashboard for managing submissions and overseeing agent assignments, built as an internal interface connected to the backend database."
+           
+  "A backend and persistent data layer (PostgreSQL, Supabase, or Firebase) to store seller inputs, property details, and lead activity across sessions and devices.",
+  "A form submission backend and CRM pipeline (Node.js/Express, serverless functions, or managed services) to capture seller intake data and route leads to cash buyers or internal teams for follow-up.",
+  "Integration with property and valuation data sources (MLS, IDX, or third-party APIs) to support pricing insights and seller decision-making.",
+  "A lead routing system that distributes submissions to a network of cash buyers based on location, price range, and property characteristics, with optional agent fallback when needed.",
+  "Notification infrastructure (email via services like SendGrid) to handle confirmations, follow-ups, and ongoing seller engagement.",
+  "An admin dashboard for managing submissions, tracking seller activity, and overseeing buyer routing and follow-up."
         ]
       },
       {

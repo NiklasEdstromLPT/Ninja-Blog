@@ -265,6 +265,15 @@ main.wrap { flex: 1; }
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.tile-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.2s ease;
+}
+.tile-reveal.tile-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .tile-ribbon {
   position: absolute;
   top: 28px;

@@ -126,7 +126,7 @@ export default function Home() {
           <p className="empty">No projects yet.</p>
         )}
         {!error && sorted && sorted.map((p, i) => (
-          <ProjectTile key={i} project={p} />
+          <ProjectTile key={`${view}-${i}`} project={p} index={i} />
         ))}
       </section>
     </>

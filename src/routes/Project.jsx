@@ -8,6 +8,7 @@ export default function Project() {
   const navigate = useNavigate();
   const { projects, error } = useProjects();
   const [slide, setSlide] = useState(0);
+  const [direction, setDirection] = useState('next');
   const [playing, setPlaying] = useState(true);
   const timer = useRef(null);
 
@@ -38,7 +39,10 @@ export default function Project() {
   });
 
   const advance = useCallback(() => {
-    if (media.length > 1) setSlide((s) => (s + 1) % media.length);
+    if (media.length > 1) {
+      setDirection('next');
+      setSlide((s) => (s + 1) % media.length);
+    }
   }, [media.length]);
 
   useEffect(() => {
@@ -93,8 +97,8 @@ export default function Project() {
       ];
 
   const current = Math.min(slide, media.length - 1);
-  const prev = () => setSlide((s) => (s - 1 + media.length) % media.length);
-  const next = () => setSlide((s) => (s + 1) % media.length);
+  const prev = () => { setDirection('prev'); setSlide((s) => (s - 1 + media.length) % media.length); };
+  const next = () => { setDirection('next'); setSlide((s) => (s + 1) % media.length); };
 
   return (
     <article className="project">
@@ -121,7 +125,7 @@ export default function Project() {
 
       {media.length > 0 && (
         <div className="carousel">
-          <div className="carousel-slide">
+          <div className={`carousel-slide slide-${direction}`} key={current}>
             {media[current].type === 'image' ? (
               <img src={media[current].src} alt={`${project.title} screenshot ${current + 1}`} />
             ) : (
@@ -135,37 +139,35 @@ export default function Project() {
             )}
           </div>
           {media.length > 1 && (
-            <>
+            <div className="carousel-controls">
               <button className="carousel-btn carousel-prev" onClick={prev} aria-label="Previous">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <div className="carousel-dots">
+                {media.map((_, i) => (
+                  <button
+                    key={i}
+                    className={`carousel-dot${i === current ? ' active' : ''}`}
+                    onClick={() => setSlide(i)}
+                    aria-label={`Go to slide ${i + 1}`}
+                  />
+                ))}
+              </div>
+              <button
+                className="carousel-playpause"
+                onClick={() => setPlaying((p) => !p)}
+                aria-label={playing ? 'Pause slideshow' : 'Play slideshow'}
+              >
+                {playing ? (
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>
+                ) : (
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"/></svg>
+                )}
               </button>
               <button className="carousel-btn carousel-next" onClick={next} aria-label="Next">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
               </button>
-              <div className="carousel-controls">
-                <div className="carousel-dots">
-                  {media.map((_, i) => (
-                    <button
-                      key={i}
-                      className={`carousel-dot${i === current ? ' active' : ''}`}
-                      onClick={() => setSlide(i)}
-                      aria-label={`Go to slide ${i + 1}`}
-                    />
-                  ))}
-                </div>
-                <button
-                  className="carousel-playpause"
-                  onClick={() => setPlaying((p) => !p)}
-                  aria-label={playing ? 'Pause slideshow' : 'Play slideshow'}
-                >
-                  {playing ? (
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>
-                  ) : (
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"/></svg>
-                  )}
-                </button>
-              </div>
-            </>
+            </div>
           )}
         </div>
       )}

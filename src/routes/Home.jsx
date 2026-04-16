@@ -17,8 +17,8 @@ export default function Home() {
   const { projects, error } = useProjects();
   const saved = loadPrefs();
   const [sort, setSort] = useState(saved.sort || 'none');
-  const [dateSort, setDateSort] = useState(saved.dateSort ?? null);
-  const [view, setView] = useState(saved.view || 'showcase');
+  const [dateSort, setDateSort] = useState(saved.dateSort ?? 'newest');
+  const [view, setView] = useState(saved.view || 'all');
 
 
   const cycleSort = () => {

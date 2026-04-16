@@ -221,6 +221,16 @@ main.wrap { flex: 1; }
   border-color: var(--accent-2);
 }
 
+.total-count {
+  animation: fade-in 0.5s ease;
+}
+
+/* "Define" the animation */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* Sort bar */
 .sort-bar {
   display: flex;
@@ -566,6 +576,7 @@ main.wrap { flex: 1; }
 
 @media (max-width: 540px) {
   .intro { padding-top: 2.5rem; }
+  .total-count { font-size: 0.9rem; margin-top: 1rem; }
   .intro h1 { font-size: 2.25rem; }
   .project h1 { font-size: 1.75rem; }
   .project-date { font-size: 1.03rem; }

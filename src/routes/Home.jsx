@@ -87,6 +87,7 @@ export default function Home() {
             onClick={() => { setView('all'); savePrefs({ view: 'all' }); }}
           >All</button>
         </div>
+        <p className="total-count" key={view}>Blog Results: {sorted?.length ?? 0}</p>
       </section>
 
       {!error && projects && projects.length > 0 && (

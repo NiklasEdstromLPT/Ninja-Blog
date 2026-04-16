@@ -134,7 +134,27 @@
           "Beyond development, building a strong investor network and handling sensitive seller data introduce business and privacy hurdles, while also requiring an agent-matching fallback when cash offers don’t meet seller expectations.",
           "Additionally, the MVP has little technical moat and risks being over-engineered, making execution, partnerships, and user trust the biggest challenges in the initial phase."
         ]
+      },
+      {
+        "title": "Needed Tech",
+        "paragraphs": [
+           "A backend and persistent data layer (PostgreSQL, Supabase, or Firebase) to replace mock sheets and local storage, enabling storage of seller inputs, property searches, agent assignments, and appointments across sessions and devices.",
+  "A form submission backend and CRM pipeline (Node.js/Express, serverless functions, or managed services) to capture seller intake data, route leads, and track agent follow-up within a centralized system.",
+  "Integration with real property data and comparables APIs (MLS, IDX, or third-party providers) to replace mock datasets and provide accurate, real-time address search and pricing insights.",
+  "A rules-based agent routing engine that maps seller inputs (location, price range, property type) to appropriate agents based on availability and geographic coverage.",
+  "Notification infrastructure (email/SMS via services like SendGrid or Twilio) to handle appointment confirmations, reminders, and ongoing lead nurturing after initial submission.",
+  "An admin dashboard for managing submissions and overseeing agent assignments, built as an internal interface connected to the backend database."
+        ]
+      },
+      {
+        "title": "Current State",
+        "paragraphs": [
+           "Deployed as a React application on GitHub, the platform operates as a fully client-side prototype with no backend or external integrations, with all data and logic handled locally.",
+  "The application includes address search, market comparables, and a multi-step seller intake wizard powered entirely by mock datasets, with agent assignment simulated through predefined logic.",
+  "Appointment confirmation and basic account-like functionality rely on local storage, offering temporary session persistence but without real-time data, backend processing, or CRM integration."
+        ]
       }
+
     ],
     "repo": "https://github.com/Juanfnmb1LPT/buymyhouse",
     "live": "https://juanfnmb1lpt.github.io/buymyhouse/",
@@ -164,6 +184,24 @@
           "Early versions of the platform face challenges in building a reliable and complete agent dataset with verified specialization and performance metrics to support accurate matching.",
           "Designing a matching system that feels truly personalized—without overcomplicating the logic—is also a key hurdle, especially at the MVP stage.",
           "Additionally, establishing trust in the \"single match\" approach and ensuring consistent communication between users and agents are critical to adoption and long-term success."
+        ]
+      },
+      {
+        "title": "Needed Tech",
+        "paragraphs": [
+          "A backend and persistent database (PostgreSQL, Supabase, Firebase, or MongoDB) to store quiz responses, captured leads, specialist profiles, and match results beyond the current client-side flow.",
+    "A rules-based matching engine that maps user inputs such as objective, situation, timeline, and location to the most relevant specialist from a structured specialist dataset.",
+    "A form submission and lead-routing pipeline (Node.js/Express, serverless functions, or managed services) to capture contact details, deliver matched lead information, and route opportunities to agents or internal staff for follow-up.",
+    "A CRM or internal lead management system to track submissions, monitor specialist assignments, and ensure captured leads move into an actual follow-up workflow rather than remaining only in the frontend experience.",
+    "An admin dashboard for managing specialist profiles, updating specialty tags and recent transaction data, and reviewing submitted matches and lead activity from the intake flow."
+        ]
+      },
+      {
+        "title": "Current State",
+        "paragraphs": [
+          "Deployed as a TypeScript React application on GitHub, the platform currently operates as a fully client-side prototype that demonstrates the intended specialist-matching experience without a live backend or external integrations.",
+    "The application includes a multi-step wizard that guides users through objective selection, situation type, timeline, location, and contact information, then assigns a specialist from a mock dataset using predefined matching logic.",
+    "The landing page and intake flow are designed to function as both a specialist-matching experience and a lead capture funnel, but the current version relies on mock specialist data, client-side logic, and simulated assignments rather than CRM integration and persistent data storage."
         ]
       }
     ],
@@ -196,7 +234,23 @@
           "Building accurate keyword-based routing and ensuring fast, consistent delivery of property data—especially without full MLS integration—are also key hurdles at the MVP stage.",
           "Additionally, coordinating agent routing, avoiding keyword conflicts, and establishing a scalable system for notifications and lead handling are critical for long-term success."
         ]
-      }
+      },
+      {
+        "title": "Needed Tech",
+        "paragraphs": [
+         "An SMS integration layer (Twilio or similar) to handle inbound texts to the 35353 short code, parse property addresses or keywords, and trigger automated responses with listing details.",
+    "A property data lookup service (MLS/IDX or third-party APIs) to retrieve real-time listing information based on incoming text queries instead of relying on simulated demo data.",
+    "A lead capture and routing system that records inbound phone numbers, links them to property requests, and routes those leads to the appropriate local agent or team for follow-up.",
+    "A notification and CRM integration pipeline to send real-time alerts (email, SMS, or Slack) to agents and track interactions, ensuring timely response and ongoing engagement.",
+    "An admin interface for managing property codes, monitoring inbound SMS activity, and configuring routing logic across different markets or agents."
+        ]},
+        {
+        "title": "Current State",
+        "paragraphs":[
+          "Deployed as a landing page experience, the platform serves as a marketing-driven entry point centered around the \"Text 35353\" concept, designed to capture high-intent users at the moment they discover a property.",
+    "The page includes a live interactive simulator that demonstrates the SMS workflow, allowing users to experience how property details would be delivered instantly through text in a controlled, front-end environment.",
+    "The current implementation focuses on showcasing the speed, simplicity, and value of the concept, functioning as a promotional and educational layer rather than a live SMS-integrated system."
+        ]}
     ],
     "repo": "https://github.com/Juanfnmb1LPT/35353",
     "live": "https://juanfnmb1lpt.github.io/35353/",

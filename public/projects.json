@@ -138,24 +138,22 @@
       {
         "title": "Needed Tech",
         "paragraphs": [
-           
-  "A backend and persistent data layer (PostgreSQL, Supabase, or Firebase) to store seller inputs, property details, and lead activity across sessions and devices.",
-  "A form submission backend and CRM pipeline (Node.js/Express, serverless functions, or managed services) to capture seller intake data and route leads to cash buyers or internal teams for follow-up.",
-  "Integration with property and valuation data sources (MLS, IDX, or third-party APIs) to support pricing insights and seller decision-making.",
-  "A lead routing system that distributes submissions to a network of cash buyers based on location, price range, and property characteristics, with optional agent fallback when needed.",
-  "Notification infrastructure (email via services like SendGrid) to handle confirmations, follow-ups, and ongoing seller engagement.",
-  "An admin dashboard for managing submissions, tracking seller activity, and overseeing buyer routing and follow-up."
+          "A backend and persistent data layer (PostgreSQL, Supabase, or Firebase) to store seller inputs, property details, and lead activity across sessions and devices.",
+          "A form submission backend and CRM pipeline (Node.js/Express, serverless functions, or managed services) to capture seller intake data and route leads to cash buyers or internal teams for follow-up.",
+          "Integration with property and valuation data sources (MLS, IDX, or third-party APIs) to support pricing insights and seller decision-making.",
+          "A lead routing system that distributes submissions to a network of cash buyers based on location, price range, and property characteristics, with optional agent fallback when needed.",
+          "Notification infrastructure (email via services like SendGrid) to handle confirmations, follow-ups, and ongoing seller engagement.",
+          "An admin dashboard for managing submissions, tracking seller activity, and overseeing buyer routing and follow-up."
         ]
       },
       {
         "title": "Current State",
         "paragraphs": [
-           "Deployed as a React application on GitHub, the platform operates as a fully client-side prototype with no backend or external integrations, with all data and logic handled locally.",
-  "The application includes address search, market comparables, and a multi-step seller intake wizard powered entirely by mock datasets, with agent assignment simulated through predefined logic.",
-  "Appointment confirmation and basic account-like functionality rely on local storage, offering temporary session persistence but without real-time data, backend processing, or CRM integration."
+          "Deployed as a React application on GitHub, the platform operates as a fully client-side prototype with no backend or external integrations, with all data and logic handled locally.",
+          "The application includes address search, market comparables, and a multi-step seller intake wizard powered entirely by mock datasets, with agent assignment simulated through predefined logic.",
+          "Appointment confirmation and basic account-like functionality rely on local storage, offering temporary session persistence but without real-time data, backend processing, or CRM integration."
         ]
       }
-
     ],
     "repo": "https://github.com/Juanfnmb1LPT/buymyhouse",
     "live": "https://juanfnmb1lpt.github.io/buymyhouse/",
@@ -191,18 +189,18 @@
         "title": "Needed Tech",
         "paragraphs": [
           "A backend and persistent database (PostgreSQL, Supabase, Firebase, or MongoDB) to store quiz responses, captured leads, specialist profiles, and match results beyond the current client-side flow.",
-    "A rules-based matching engine that maps user inputs such as objective, situation, timeline, and location to the most relevant specialist from a structured specialist dataset.",
-    "A form submission and lead-routing pipeline (Node.js/Express, serverless functions, or managed services) to capture contact details, deliver matched lead information, and route opportunities to agents or internal staff for follow-up.",
-    "A CRM or internal lead management system to track submissions, monitor specialist assignments, and ensure captured leads move into an actual follow-up workflow rather than remaining only in the frontend experience.",
-    "An admin dashboard for managing specialist profiles, updating specialty tags and recent transaction data, and reviewing submitted matches and lead activity from the intake flow."
+          "A rules-based matching engine that maps user inputs such as objective, situation, timeline, and location to the most relevant specialist from a structured specialist dataset.",
+          "A form submission and lead-routing pipeline (Node.js/Express, serverless functions, or managed services) to capture contact details, deliver matched lead information, and route opportunities to agents or internal staff for follow-up.",
+          "A CRM or internal lead management system to track submissions, monitor specialist assignments, and ensure captured leads move into an actual follow-up workflow rather than remaining only in the frontend experience.",
+          "An admin dashboard for managing specialist profiles, updating specialty tags and recent transaction data, and reviewing submitted matches and lead activity from the intake flow."
         ]
       },
       {
         "title": "Current State",
         "paragraphs": [
           "Deployed as a TypeScript React application on GitHub, the platform currently operates as a fully client-side prototype that demonstrates the intended specialist-matching experience without a live backend or external integrations.",
-    "The application includes a multi-step wizard that guides users through objective selection, situation type, timeline, location, and contact information, then assigns a specialist from a mock dataset using predefined matching logic.",
-    "The landing page and intake flow are designed to function as both a specialist-matching experience and a lead capture funnel, but the current version relies on mock specialist data, client-side logic, and simulated assignments rather than CRM integration and persistent data storage."
+          "The application includes a multi-step wizard that guides users through objective selection, situation type, timeline, location, and contact information, then assigns a specialist from a mock dataset using predefined matching logic.",
+          "The landing page and intake flow are designed to function as both a specialist-matching experience and a lead capture funnel, but the current version relies on mock specialist data, client-side logic, and simulated assignments rather than CRM integration and persistent data storage."
         ]
       }
     ],
@@ -217,7 +215,6 @@
   {
     "title": "Text-Based Lead Capture",
     "date": "04-13-2026",
-    "showcase": true,
     "tileSummary": "A text-based real estate platform that captures buyer intent by instantly delivering property details via SMS and connecting them with agents.",
     "text": [
       {
@@ -239,19 +236,21 @@
       {
         "title": "Needed Tech",
         "paragraphs": [
-         "An SMS integration layer (Twilio or similar) to handle inbound texts to the 35353 short code, parse property addresses or keywords, and trigger automated responses with listing details.",
-    "A property data lookup service (MLS/IDX or third-party APIs) to retrieve real-time listing information based on incoming text queries instead of relying on simulated demo data.",
-    "A lead capture and routing system that records inbound phone numbers, links them to property requests, and routes those leads to the appropriate local agent or team for follow-up.",
-    "A notification and CRM integration pipeline to send real-time alerts (email, SMS, or Slack) to agents and track interactions, ensuring timely response and ongoing engagement.",
-    "An admin interface for managing property codes, monitoring inbound SMS activity, and configuring routing logic across different markets or agents."
-        ]},
-        {
+          "An SMS integration layer (Twilio or similar) to handle inbound texts to the 35353 short code, parse property addresses or keywords, and trigger automated responses with listing details.",
+          "A property data lookup service (MLS/IDX or third-party APIs) to retrieve real-time listing information based on incoming text queries instead of relying on simulated demo data.",
+          "A lead capture and routing system that records inbound phone numbers, links them to property requests, and routes those leads to the appropriate local agent or team for follow-up.",
+          "A notification and CRM integration pipeline to send real-time alerts (email, SMS, or Slack) to agents and track interactions, ensuring timely response and ongoing engagement.",
+          "An admin interface for managing property codes, monitoring inbound SMS activity, and configuring routing logic across different markets or agents."
+        ]
+      },
+      {
         "title": "Current State",
-        "paragraphs":[
+        "paragraphs": [
           "Deployed as a landing page experience, the platform serves as a marketing-driven entry point centered around the \"Text 35353\" concept, designed to capture high-intent users at the moment they discover a property.",
-    "The page includes a live interactive simulator that demonstrates the SMS workflow, allowing users to experience how property details would be delivered instantly through text in a controlled, front-end environment.",
-    "The current implementation focuses on showcasing the speed, simplicity, and value of the concept, functioning as a promotional and educational layer rather than a live SMS-integrated system."
-        ]}
+          "The page includes a live interactive simulator that demonstrates the SMS workflow, allowing users to experience how property details would be delivered instantly through text in a controlled, front-end environment.",
+          "The current implementation focuses on showcasing the speed, simplicity, and value of the concept, functioning as a promotional and educational layer rather than a live SMS-integrated system."
+        ]
+      }
     ],
     "repo": "https://github.com/Juanfnmb1LPT/35353",
     "live": "https://juanfnmb1lpt.github.io/35353/",
@@ -348,6 +347,27 @@
     "tileImage": "images/PreApproval.png",
     "supportingImages": [
       "images/PreApproval-2.png"
+    ]
+  },
+  {
+    "title": "Spring Con Merch",
+    "date": "04-28-2026",
+    "showcase": true,
+    "tileSummary": "In-person merch sales at Spring Con, powered by Shop Squared, Square, and Shopify.",
+    "text": [
+      {
+        "title": "Summary",
+        "paragraphs": [
+          "Spring Con Merch is the in-person retail operation we ran at Spring Con, combining three platforms to handle inventory, point-of-sale, and online order fulfillment in a single workflow.",
+          "Shop Squared manages the inventory layer: bins, items, and product variations. Square handles on-site card payments and Shopify covers the online storefront and order pipeline. Together they let us track stock, ring up sales, and fulfill orders without juggling spreadsheets."
+        ]
+      }
+    ],
+    "tileImage": "images/spring-merch.jpg",
+    "supportingImages": [
+      "images/spring-merch-2.jpg",
+      "images/spring-merch-3.jpg",
+      "images/spring-merch-4.jpg"
     ]
   },
   {

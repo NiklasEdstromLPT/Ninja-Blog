@@ -27,6 +27,7 @@ Edit [public/projects.json](public/projects.json) and append an object to the ar
   ],
   "tileImage": "images/my-thumb.png",
   "supportingImages": ["images/shot1.png", "images/shot2.png"],
+  "keyTech": "React, Vite, Node.js",
   "live": "https://example.com",
   "repo": "https://github.com/you/repo",
   "slug": "optional-override"
@@ -39,6 +40,7 @@ Edit [public/projects.json](public/projects.json) and append an object to the ar
 - `longSummary` — legacy: optional detailed text shown on the project page (the app still falls back to this if `text` is absent).
 - `tileImage` — optional image shown on the home tile.
 - `supportingImages` — optional gallery images shown on the project page.
+- `keyTech` — optional comma-separated list of technologies (e.g. `"React, Vite, Node.js"`). Each item renders as a small blue chip below the paragraphs on the project page. Only include software/frameworks/languages actually cited in the project's paragraphs.
 - `summary` — optional legacy fallback used when `tileSummary`/`longSummary` are not provided.
 - `images` — optional legacy fallback for `supportingImages` (and tile thumbnail when `tileImage` is absent).
 - `slug` — optional explicit override.

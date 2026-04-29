@@ -574,6 +574,26 @@ main.wrap { flex: 1; }
   margin-top: 0.125rem;
 }
 
+/* Key tech chips */
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.5rem;
+}
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(27, 110, 243, 0.12);
+  border: 1px solid rgba(27, 110, 243, 0.25);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 @media (max-width: 540px) {
   .intro { padding-top: 2.5rem; }
   .total-count { font-size: 0.9rem; margin-top: 1rem; }

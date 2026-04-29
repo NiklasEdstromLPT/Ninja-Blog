@@ -3,6 +3,7 @@
     "title": "Shop Squared",
     "date": "04-08-2026",
     "tileSummary": "Inventory management app for ecommerce and event workflows.",
+    "keyTech": "Vue 3, Vite, Node.js, Supabase",
     "text": [
       {
         "title": "Summary",
@@ -24,6 +25,7 @@
     "title": "Zoom Bot",
     "date": "04-05-2026",
     "tileSummary": "A bot that integrates with OBS Studio in Zoom meetings to trigger automated responses, visuals, and sound effects.",
+    "keyTech": "Node.js, Zoom API, OBS Studio",
     "text": [
       {
         "title": "Summary",
@@ -76,6 +78,7 @@
     "title": "Direct Mail Sphere",
     "date": "04-06-2026",
     "tileSummary": "A full-stack platform for real estate agents to create targeted direct mail campaigns.",
+    "keyTech": "Vue 3, Vite, Node.js, Express, Resend, FusionPro",
     "text": [
       {
         "title": "Summary",
@@ -97,6 +100,7 @@
     "title": "Lofty Forms",
     "date": "04-04-2026",
     "tileSummary": "Dynamic onboarding forms with an admin panel, per-office QR codes, and live Lofty API integration.",
+    "keyTech": "Vue 3, Vite, Node.js, Express",
     "text": [
       {
         "title": "Summary",
@@ -118,6 +122,7 @@
     "date": "04-15-2026",
     "showcase": true,
     "tileSummary": "A platform that captures motivated sellers, connects them with buyers or specialists, and offers sale paths based on their needs.",
+    "keyTech": "React",
     "text": [
       {
         "title": "Summary",
@@ -168,6 +173,7 @@
     "date": "04-14-2026",
     "showcase": true,
     "tileSummary": "A platform that matches homeowners with the most qualified real estate agent for their specific situation.",
+    "keyTech": "TypeScript, React",
     "text": [
       {
         "title": "Summary",
@@ -264,6 +270,7 @@
     "title": "Military Leads",
     "date": "04-12-2026",
     "tileSummary": "A lead-matching platform that pairs active-duty members, veterans, and military families with real estate agents who specialize in VA loans and PCS moves.",
+    "keyTech": "HTML, Tailwind CSS",
     "text": [
       {
         "title": "Summary",
@@ -308,6 +315,7 @@
     "title": "PreApprove",
     "date": "04-11-2026",
     "tileSummary": "A mortgage preapproval matching service that routes borrowers into the right loan program and hands them to 2\u20133 vetted lenders \u2014 no hard credit pull.",
+    "keyTech": "HTML, CSS",
     "text": [
       {
         "title": "Summary",
@@ -354,6 +362,7 @@
     "date": "04-28-2026",
     "showcase": true,
     "tileSummary": "In-person merch sales at Spring Con, powered by Shop Squared, Square, and Shopify.",
+    "keyTech": "Shop Squared, Square, Shopify",
     "text": [
       {
         "title": "Summary",
@@ -375,6 +384,7 @@
     "title": "FSBO Support",
     "date": "04-10-2026",
     "tileSummary": "A support-oriented toolkit and education site for homeowners selling independently \u2014 pricing, listing, and offer-handling guidance without the agent-commission pitch.",
+    "keyTech": "HTML, CSS",
     "text": [
       {
         "title": "Summary",

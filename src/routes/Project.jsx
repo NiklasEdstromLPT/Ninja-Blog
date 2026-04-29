@@ -86,6 +86,11 @@ export default function Project() {
     : project.summary ? [project.summary] : [];
   const challengeParts = collectFields('challenges');
 
+  const techList = String(project.keyTech || '')
+    .split(',')
+    .map((t) => t.trim())
+    .filter(Boolean);
+
   // New schema: `project.text` is an array of { title, paragraphs: [] }.
   // Build `sections` to render: prefer `project.text`, otherwise fall back
   // to the older `Summary`/`Challenges` fields for backward compatibility.
@@ -180,7 +185,16 @@ export default function Project() {
             : section.text && <p>{section.text}</p>}
         </section>
       ))}
-        {project.date && (
+
+      {techList.length > 0 && (
+        <div className="tech-chips">
+          {techList.map((t) => (
+            <span key={t} className="tech-chip">{t}</span>
+          ))}
+        </div>
+      )}
+
+      {project.date && (
         <div className="project-date">Posted on {project.date}</div>
       )}
     </article>

@@ -367,8 +367,8 @@
       {
         "title": "Summary",
         "paragraphs": [
-          "Spring Con Merch is the in-person retail operation we ran at Spring Con, combining three platforms to handle inventory, point-of-sale, and online order fulfillment in a single workflow.",
-          "Shop Squared manages the inventory layer: bins, items, and product variations. Square handles on-site card payments and Shopify covers the online storefront and order pipeline. Together they let us track stock, ring up sales, and fulfill orders without juggling spreadsheets."
+          "Spring Con was the initial real world test of our merch system, combining bin based inventory, Square POS, and Shopify reconciliation into a single workflow. Shop² manages the inventory layer including bins and item variations, Square handles in person POS, and Shopify covers the online storefront and orders.",
+          "The operation ran largely without executive oversight and still drove strong sales, which is a good sign for how the system scales with a lean team. The bin layout and SKU structure gave quick access to inventory, the Square to Shopify conversion ran clean because the logic was built in ahead of time, and QR bin scanning was the standout feature: scan a bin, see exactly what's in it, and move on. We were limited by inventory quantities at points, but the built in low stock report helps get ahead of that for future events. There are a few things to tighten up around bin organization and the POS onboarding flow, but the foundation is solid and we're building on it."
         ]
       }
     ],

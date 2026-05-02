@@ -222,6 +222,7 @@
     "title": "Text-Based Lead Capture",
     "date": "04-13-2026",
     "tileSummary": "A text-based real estate platform that captures buyer intent by instantly delivering property details via SMS and connecting them with agents.",
+    "keyTech": "React",
     "text": [
       {
         "title": "Summary",
